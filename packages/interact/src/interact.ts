@@ -1,6 +1,6 @@
 import displace from 'displacejs'
 
-export class GM_interact {
+export class Interact {
   private target: HTMLElement
   private displace: DisplaceJSObject
   private options: DisplaceJSOptions | undefined

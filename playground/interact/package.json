@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@zero-dependency/interact": "workspace:*",
-    "@zero-dependency/storage": "workspace:*"
+    "@zero-dependency/storage": "workspace:*",
+    "redom": "^3.29.1"
   }
 }

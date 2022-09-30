@@ -8,6 +8,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@zero-dependency/dom": "workspace:*"
+    "@zero-dependency/dom": "workspace:*",
+    "redom": "^3.29.1"
   }
 }

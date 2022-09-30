@@ -1,7 +1,6 @@
 import { el, mount } from 'redom'
-import { GM_interact } from '@zero-dependency/interact'
-import { GM_store } from '@zero-dependency/store'
-import './style.css'
+import { Interact } from '@zero-dependency/interact'
+import { LocalStorage } from '@zero-dependency/storage'
 
 const modalHeader = el('div', {
   className: 'modal-header'
@@ -27,9 +26,9 @@ const overlay = el(
   modal
 )
 
-const store = new GM_store('position', { x: 0, y: 0 })
+const store = LocalStorage('position', { x: 0, y: 0 })
 
-const interact = new GM_interact(modal, {
+const interact = new Interact(modal, {
   constrain: true,
   relativeTo: overlay,
   handle: modalHeader,

@@ -1,17 +1,26 @@
+import { el, mount } from 'redom'
 import { observeElement, waitObserveElement } from '@zero-dependency/dom'
 
 function createButton() {
-  const button = document.createElement('button')
-  button.textContent = 'Click me'
-  button.addEventListener('click', () => {
-    const card = document.createElement('div')
-    card.addEventListener('click', () => card.remove())
-    card.classList.add('card')
-    card.textContent = Math.random().toString(16).slice(2)
-    document.body.appendChild(card)
+  const card = el('div', {
+    className: 'card',
+    onclick: () => {
+      card.remove()
+    }
   })
 
-  document.body.appendChild(button)
+  const button = el(
+    'button',
+    {
+      onclick: () => {
+        card.textContent = Math.random().toString(16).slice(2)
+        mount(document.body, card)
+      }
+    },
+    'Click me'
+  )
+
+  mount(document.body, button)
 }
 
 async function bootstrap() {
