@@ -1,4 +1,4 @@
-export function observe(
+export function observeElement(
   selector: string,
   callback: (el: Element) => void,
   target = document.body
@@ -7,7 +7,7 @@ export function observe(
     for (const mutation of mutations) {
       for (const node of mutation.addedNodes) {
         const el = node as Element
-        if (el.matches(selector)) {
+        if (el.matches && el.matches(selector)) {
           callback(el)
         }
       }

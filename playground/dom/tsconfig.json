@@ -17,10 +17,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "skipLibCheck": true,
-    "types": [
-      "vite-userscript-plugin/types/tampermonkey"
-    ]
+    "skipLibCheck": true
   },
   "include": [
     "src"
