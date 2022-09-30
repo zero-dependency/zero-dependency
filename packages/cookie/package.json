@@ -1,0 +1,13 @@
+{
+  "name": "@zero-dependency/cookie",
+  "version": "0.0.0",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prepublishOnly": "pnpm build"
+  }
+}

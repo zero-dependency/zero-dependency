@@ -1,0 +1,17 @@
+{
+  "name": "@zero-dependency/emitter",
+  "version": "0.0.0",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "exports": {
+    "default": "./dist/index.js",
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
+  }
+}
