@@ -1,4 +1,4 @@
-import { GM_emitter } from '@zero-dependency/emitter'
+import { Emitter } from '@zero-dependency/emitter'
 
 const messageUpper = Symbol('message:upper')
 
@@ -8,14 +8,14 @@ type Events = {
   'once-event': () => void
 }
 
-const events = new GM_emitter<Events>()
+const events = new Emitter<Events>()
 
 function toUpper(message: string): void {
-  console.log('message:upper', message.toUpperCase())
+  console.log(messageUpper, message.toUpperCase())
 }
 
 function toUpperAndSplit(message: string): void {
-  console.log('message:upper (split)', message.toUpperCase().split(''))
+  console.log(messageUpper, message.toUpperCase().split(''))
 }
 
 function toLower(message: string): void {
@@ -36,5 +36,5 @@ events.off(messageUpper, toUpperAndSplit)
 
 console.log({
   'once-event': events.listenerCount('once-event'),
-  'message:upper': events.listenerCount(messageUpper)
+  [messageUpper]: events.listenerCount(messageUpper)
 })

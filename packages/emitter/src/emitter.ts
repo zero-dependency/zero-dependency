@@ -1,12 +1,12 @@
 import type { EventMap, TypedEventEmitter } from './types.js'
 
-export class GM_emitter<T extends EventMap> implements TypedEventEmitter<T> {
+export class Emitter<T extends EventMap> implements TypedEventEmitter<T> {
   #events: Record<string | number | symbol, Function[]> = {}
 
   on<E extends keyof T>(event: E, listener: T[E]): this {
-    const events = this.#events[event]
-    if (events) {
-      events.push(listener)
+    const listeners = this.#events[event]
+    if (listeners) {
+      listeners.push(listener)
     } else {
       this.#events[event] = [listener]
     }
@@ -30,19 +30,17 @@ export class GM_emitter<T extends EventMap> implements TypedEventEmitter<T> {
   }
 
   emit<E extends keyof T>(event: E, ...args: Parameters<T[E]>): boolean {
-    const events = this.#events[event] || []
-    for (let i = 0; i < events.length; i++) {
-      events[i]!(...args)
+    const listeners = this.#events[event] || []
+    for (let i = 0; i < listeners.length; i++) {
+      listeners[i]!(...args)
     }
 
-    return Boolean(events.length)
+    return Boolean(listeners.length)
   }
 
   off<E extends keyof T>(event: E, listener: T[E]): this {
     if (this.#events[event]) {
-      this.#events[event] = this.#events[event].filter(
-        (event) => event !== listener
-      )
+      this.#events[event] = this.#events[event].filter((v) => v !== listener)
     }
 
     return this
