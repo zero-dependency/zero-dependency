@@ -8,8 +8,6 @@
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",
-    "test": "vitest",
-    "test:watch": "vitest --ui --watch",
     "prepublishOnly": "pnpm build"
   }
 }

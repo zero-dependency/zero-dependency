@@ -16,7 +16,7 @@ export class BaseStorage<T> {
 
   write(value: T): T
   write(value: (prevValue: T) => T): T
-  write(values: T | ((prevValue: T) => T)): T | null {
+  write(values: T | ((prevValue: T) => T)): T {
     if (values instanceof Function) {
       values = values(this.values())
     }
@@ -24,10 +24,14 @@ export class BaseStorage<T> {
     try {
       this.storage.setItem(this.key, JSON.stringify(values))
     } catch (err) {
-      console.error('Failed to save:', err)
-    } finally {
-      return values
+      console.error(
+        `Failed to save (${this.key}):`,
+        (err as DOMException).message
+      )
+      return this.initialValue
     }
+
+    return values
   }
 
   reset(): void {

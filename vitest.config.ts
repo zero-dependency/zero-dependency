@@ -3,6 +3,9 @@ import { defineConfig } from 'vitest/config'
 export default defineConfig({
   test: {
     watch: false,
-    include: ['packages/*.test.ts']
+    threads: true,
+    logHeapUsage: true,
+    environment: 'jsdom',
+    include: ['packages/**/*.test.ts']
   }
 })

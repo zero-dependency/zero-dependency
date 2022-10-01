@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "turbo run dev --filter='./packages/*'",
     "build": "turbo run build --filter='./packages/*'",
-    "test": "turbo run test --filter='./packages/*'",
-    "test:watch": "turbo run test:watch --filter='./packages/*'",
+    "test": "vitest",
+    "test:watch": "vitest --ui --watch",
     "format": "prettier --write --ignore-unknown **"
   },
   "devDependencies": {
@@ -14,6 +14,7 @@
     "@crashmax/tsconfig": "^1.0.2",
     "@types/node": "^18.7.23",
     "@vitest/ui": "^0.23.4",
+    "jsdom": "^20.0.0",
     "turbo": "^1.5.4",
     "typescript": "^4.8.4",
     "vite": "^3.1.4",
