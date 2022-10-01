@@ -6,12 +6,17 @@ interface CookieParseOptions {
 }
 
 class Cookie {
-  private serialize: CookieParseOptions['serialize'] | undefined
-  private deserialize: CookieParseOptions['deserialize'] | undefined
+  private serialize: CookieParseOptions['serialize']
+  private deserialize: CookieParseOptions['deserialize']
 
   constructor(options?: CookieParseOptions) {
-    this.serialize = options?.serialize
-    this.deserialize = options?.deserialize
+    this.serialize = (value: any) => {
+      return options?.serialize ? options.serialize(value) : value
+    }
+
+    this.deserialize = (value: string) => {
+      return options?.deserialize ? options.deserialize(value) : value
+    }
   }
 
   get<T = string>(name: string): T | null {
@@ -22,7 +27,7 @@ class Cookie {
       let value = parts.pop()?.split(';').shift()
       if (value) {
         value = decodeURIComponent(value)
-        return this.deserialize ? this.deserialize(value) : value
+        return this.deserialize(value)
       }
     }
 
@@ -49,7 +54,7 @@ class Cookie {
     }
 
     let cookie = `${encodeURIComponent(name)}=${encodeURIComponent(
-      this.serialize ? this.serialize(value) : (value as string)
+      this.serialize(value)
     )}`
 
     for (const [key, value] of Object.entries(opts)) {
@@ -62,11 +67,15 @@ class Cookie {
     document.cookie = cookie
   }
 
-  list<T extends Record<string, string>>(): T | Record<string, string> {
+  list<T extends Record<string, any>>(): T | Record<string, any> {
     return document.cookie.split(';').reduce((acc, cookie) => {
       const [name, value] = cookie.split('=').map((v) => v.trim())
       if (!name || !value) return acc
-      return { ...acc, [name]: decodeURIComponent(value) }
+
+      return {
+        ...acc,
+        [decodeURIComponent(name)]: this.deserialize(decodeURIComponent(value))
+      }
     }, {})
   }
 
