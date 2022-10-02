@@ -1,6 +1,6 @@
 {
   "name": "@zero-dependency/dom",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.es.js",
