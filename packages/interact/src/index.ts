@@ -1,1 +1,1 @@
-export * from './interact.js'
+export { Interact } from './interact.js'

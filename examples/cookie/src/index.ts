@@ -1,23 +1,9 @@
-import { Cookie } from '@zero-dependency/cookie'
-
-const cookie = new Cookie({
-  serialize(value) {
-    return JSON.stringify(value)
-  },
-  deserialize(value) {
-    try {
-      return JSON.parse(value)
-    } catch (err) {
-      return null
-    }
-  }
-})
-
-cookie.set('le_xot', { id: 1, name: 'Lesha' }, { expires: 7 })
+import { cookie } from '@zero-dependency/cookie'
 
 interface User {
   id: number
   name: string
 }
 
+cookie.set('le_xot', { id: 1, name: 'Lesha' }, { expires: 7 })
 console.log(cookie.get<User>('le_xot'))

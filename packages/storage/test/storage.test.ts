@@ -6,21 +6,18 @@ interface User {
   name: string
 }
 
-function generateUser() {
-  let id = 0
-
-  return (): User => {
-    id++
-    return { id, name: Math.random().toString() }
-  }
-}
-
 describe('BaseStorage (localStorage)', (test) => {
   const storage = new BaseStorage<User[]>('users', [], localStorage)
 
-  const user = generateUser()
-  const firstUser = user()
-  const twoUser = user()
+  const firstUser = {
+    id: 1,
+    name: 'John'
+  }
+
+  const secondUser = {
+    id: 2,
+    name: 'Martin'
+  }
 
   test('initialValue', () => {
     expect(storage.initialValue).toEqual([])
@@ -28,14 +25,14 @@ describe('BaseStorage (localStorage)', (test) => {
 
   test('write', () => {
     expect(storage.write((users) => [...users, firstUser])).toEqual([firstUser])
-    expect(storage.write((users) => [...users, twoUser])).toEqual([
+    expect(storage.write((users) => [...users, secondUser])).toEqual([
       firstUser,
-      twoUser
+      secondUser
     ])
   })
 
   test('values', () => {
-    expect(storage.values()).toEqual([firstUser, twoUser])
+    expect(storage.values()).toEqual([firstUser, secondUser])
   })
 
   test('reset', () => {
@@ -44,7 +41,7 @@ describe('BaseStorage (localStorage)', (test) => {
   })
 
   test('values (SyntaxError)', () => {
-    storage.write([firstUser, twoUser])
+    storage.write([firstUser, secondUser])
     localStorage.setItem('users', '{')
     expect(storage.values()).toEqual([])
   })

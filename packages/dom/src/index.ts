@@ -1,2 +1,2 @@
-export * from './observeElement.js'
-export * from './waitObserveElement.js'
+export { observeElement } from './observeElement.js'
+export { waitObserveElement } from './waitObserveElement.js'

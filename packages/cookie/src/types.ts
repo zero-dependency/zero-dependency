@@ -1,3 +1,11 @@
+export type Serialize = (value: any) => string | number | boolean
+export type Deserialize = (value: string) => any
+
+export interface Options {
+  serialize: Serialize
+  deserialize: Deserialize
+}
+
 export interface CookieOptions {
   path?: string
   domain?: string

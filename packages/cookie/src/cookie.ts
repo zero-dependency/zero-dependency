@@ -1,15 +1,10 @@
-import type { CookieOptions } from './types.js'
+import type { CookieOptions, Deserialize, Options, Serialize } from './types.js'
 
-interface CookieParseOptions {
-  serialize: (value: any) => string | number | boolean
-  deserialize: (value: string) => any
-}
+export class Cookie {
+  private serialize: Serialize
+  private deserialize: Deserialize
 
-class Cookie {
-  private serialize: CookieParseOptions['serialize']
-  private deserialize: CookieParseOptions['deserialize']
-
-  constructor(options?: CookieParseOptions) {
+  constructor(options?: Options) {
     this.serialize = (value: any) => {
       return options?.serialize ? options.serialize(value) : value
     }
@@ -84,5 +79,16 @@ class Cookie {
   }
 }
 
-const cookie = new Cookie()
-export { Cookie, cookie }
+export const cookie = new Cookie({
+  serialize(value) {
+    return JSON.stringify(value)
+  },
+  deserialize(value) {
+    try {
+      return JSON.parse(value)
+    } catch (err) {
+      console.error(err)
+      return null
+    }
+  }
+})

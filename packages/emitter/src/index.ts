@@ -1,1 +1,1 @@
-export * from './emitter.js'
+export { Emitter } from './emitter.js'
