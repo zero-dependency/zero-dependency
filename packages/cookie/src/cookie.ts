@@ -15,14 +15,12 @@ export class Cookie {
   }
 
   get<T = string>(name: string): T | null {
-    const value = `; ${document.cookie}`
-    const parts = value.split(`; ${name}=`)
+    const parts = `; ${document.cookie}`.split(`; ${name}=`)
 
     if (parts.length === 2) {
       let value = parts.pop()?.split(';').shift()
       if (value) {
-        value = decodeURIComponent(value)
-        return this.deserialize(value)
+        return this.deserialize(decodeURIComponent(value))
       }
     }
 
