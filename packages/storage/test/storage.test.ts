@@ -1,13 +1,13 @@
 import { describe, expect } from 'vitest'
-import { BaseStorage } from '../src/base-storage.js'
+import { LocalStorage } from '../src/index.js'
 
 interface User {
   id: number
   name: string
 }
 
-describe('BaseStorage (localStorage)', (test) => {
-  const storage = new BaseStorage<User[]>('users', [], localStorage)
+describe('@zero-dependency/storage', (test) => {
+  const storage = new LocalStorage<User[]>('users', [])
 
   const firstUser = {
     id: 1,
@@ -32,22 +32,22 @@ describe('BaseStorage (localStorage)', (test) => {
   })
 
   test('values', () => {
-    expect(storage.values()).toEqual([firstUser, secondUser])
+    expect(storage.values).toEqual([firstUser, secondUser])
   })
 
   test('reset', () => {
     storage.reset()
-    expect(storage.values()).toEqual([])
+    expect(storage.values).toEqual([])
   })
 
   test('values (SyntaxError)', () => {
     storage.write([firstUser, secondUser])
     localStorage.setItem('users', '{')
-    expect(storage.values()).toEqual([])
+    expect(storage.values).toEqual([])
   })
 
   test('write (DOMException)', () => {
-    const data = new BaseStorage('data', '', localStorage)
+    const data = new LocalStorage('data', '')
     const xdd = 'xdd'.repeat(9999999)
     expect(data.write(xdd)).toBe('')
   })

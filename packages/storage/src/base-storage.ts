@@ -5,7 +5,7 @@ export class BaseStorage<T> {
     private readonly storage: Storage
   ) {}
 
-  values(): T {
+  get values(): T {
     try {
       const value = this.storage.getItem(this.key)
       return value ? JSON.parse(value) : this.initialValue
@@ -16,13 +16,13 @@ export class BaseStorage<T> {
 
   write(value: T): T
   write(value: (prevValue: T) => T): T
-  write(values: T | ((prevValue: T) => T)): T {
-    if (values instanceof Function) {
-      values = values(this.values())
+  write(value: T | ((prevValue: T) => T)): T {
+    if (value instanceof Function) {
+      value = value(this.values)
     }
 
     try {
-      this.storage.setItem(this.key, JSON.stringify(values))
+      this.storage.setItem(this.key, JSON.stringify(value))
     } catch (err) {
       console.error(
         `Failed to save (${this.key}):`,
@@ -31,7 +31,7 @@ export class BaseStorage<T> {
       return this.initialValue
     }
 
-    return values
+    return value
   }
 
   reset(): void {
