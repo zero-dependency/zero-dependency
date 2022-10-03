@@ -1,10 +1,16 @@
-import type { CookieOptions, Deserialize, Options, Serialize } from './types.js'
+import type {
+  CookieAttributes,
+  CookieOptions,
+  Deserialize,
+  Serialize
+} from './types.js'
 
 export class Cookie {
   private serialize: Serialize
   private deserialize: Deserialize
+  private attributes: CookieAttributes
 
-  constructor(options?: Options) {
+  constructor(options?: CookieOptions) {
     this.serialize = (value: any) => {
       return options?.serialize ? options.serialize(value) : value
     }
@@ -12,6 +18,10 @@ export class Cookie {
     this.deserialize = (value: string) => {
       return options?.deserialize ? options.deserialize(value) : value
     }
+  }
+
+  withAttributes(attributes: Omit<CookieAttributes, 'max-age'>): void {
+    this.attributes = { ...this.attributes, ...attributes }
   }
 
   get<T = string>(name: string): T | null {
@@ -27,30 +37,31 @@ export class Cookie {
     return null
   }
 
-  set<T = string>(name: string, value: T, options: CookieOptions = {}): void {
-    const opts = {
+  set<T = string>(name: string, value: T, attributes?: CookieAttributes): void {
+    const attr = {
       path: '/',
-      ...options
+      ...this.attributes,
+      ...attributes
     }
 
-    if (typeof opts.expires === 'number') {
-      opts.expires = new Date(Date.now() + opts.expires * 864e5)
+    if (typeof attr.expires === 'number') {
+      attr.expires = new Date(Date.now() + attr.expires * 864e5)
     }
 
-    if (opts.expires instanceof Date) {
-      opts.expires = opts.expires.toUTCString()
+    if (attr.expires instanceof Date) {
+      attr.expires = attr.expires.toUTCString()
     }
 
-    if (opts.maxAge) {
-      opts['max-age'] = opts.maxAge
-      delete opts.maxAge
+    if (attr.maxAge) {
+      attr['max-age'] = attr.maxAge
+      delete attr.maxAge
     }
 
     let cookie = `${encodeURIComponent(name)}=${encodeURIComponent(
       this.serialize(value)
     )}`
 
-    for (const [key, value] of Object.entries(opts)) {
+    for (const [key, value] of Object.entries(attr)) {
       cookie += `; ${key}`
       if (value !== true) {
         cookie += `=${value}`
@@ -72,12 +83,13 @@ export class Cookie {
     }, {})
   }
 
-  delete(name: string): void {
-    this.set(name, '', { expires: -1 })
+  delete(name: string, attributes?: CookieAttributes): void {
+    this.set(name, '', { ...attributes, expires: -1 })
   }
 }
 
-export const cookie = new Cookie({
+/** JSON serialize/deserialize */
+export const cookies = new Cookie({
   serialize(value) {
     return JSON.stringify(value)
   },
@@ -85,7 +97,7 @@ export const cookie = new Cookie({
     try {
       return JSON.parse(value)
     } catch (err) {
-      console.error(err)
+      if (import.meta.env.PROD) console.error(err)
       return null
     }
   }

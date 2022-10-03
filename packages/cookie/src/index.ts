@@ -1,2 +1,2 @@
-export { Cookie, cookie } from './cookie.js'
-export type { CookieOptions } from './types.js'
+export { Cookie, cookies } from './cookie.js'
+export type { CookieAttributes } from './types.js'

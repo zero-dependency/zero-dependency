@@ -1,48 +1,60 @@
 import { describe, expect } from 'vitest'
-import { Cookie } from '../src/cookie.js'
+import { Cookie, cookies } from '../src/index.js'
 
 interface User {
   id: number
   name: string
 }
 
-describe('Cookie', (test) => {
-  const cookie = new Cookie({
-    serialize(value) {
-      return JSON.stringify(value)
-    },
-    deserialize(value) {
-      try {
-        return JSON.parse(value)
-      } catch (err) {
-        return err
-      }
-    }
-  })
-
+describe('@zero-dependency/cookie', (test) => {
   const user = {
     id: 1,
     name: 'John'
   }
 
+  test('cookie instance', () => {
+    const cookie = new Cookie()
+    cookie.set('foo', 1)
+    expect(cookie.get('foo')).toBe('1')
+    cookie.delete('foo')
+  })
+
   test('set', () => {
     expect(document.cookie).toBe('')
-    cookie.set<User>('user', user)
+    cookies.set<User>('user', user, { maxAge: 7 })
     expect(document.cookie).toBe(
       'user=%7B%22id%22%3A1%2C%22name%22%3A%22John%22%7D'
     )
   })
 
   test('get', () => {
-    expect(cookie.get<User>('user')).toMatchObject(user)
+    expect(cookies.get<User>('user')).toMatchObject(user)
+    expect(cookies.get('unknown')).toBeNull()
+
+    document.cookie = 'empty='
+    document.cookie = 'bad=%7B'
+    expect(cookies.get('empty')).toBeNull()
+    expect(cookies.get('bad')).toBeNull()
   })
 
   test('list', () => {
-    expect(cookie.list<{ user: User }>()).toMatchObject({ user })
+    expect(cookies.list<{ user: User }>()).toEqual({
+      user,
+      bad: null
+    })
   })
 
   test('delete', () => {
-    cookie.delete('user')
+    cookies.delete('bad')
+    cookies.delete('empty')
+    cookies.delete('user')
     expect(document.cookie).toBe('')
+  })
+
+  test('withAttributes', () => {
+    cookies.withAttributes({
+      path: '/',
+      domain: '.example.com'
+    })
   })
 })
