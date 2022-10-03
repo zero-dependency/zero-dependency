@@ -2,3 +2,4 @@
 **/.turbo
 **/dist
 *.log
+coverage

@@ -1,5 +1,5 @@
 import { describe, expect } from 'vitest'
-import { LocalStorage } from '../src/index.js'
+import { LocalStorage, SessionStorage } from '../src/index.js'
 
 interface User {
   id: number
@@ -7,6 +7,9 @@ interface User {
 }
 
 describe('@zero-dependency/storage', (test) => {
+  const session = new SessionStorage('session', '')
+  expect(session.values).toBe('')
+
   const storage = new LocalStorage<User[]>('users', [])
 
   const firstUser = {
