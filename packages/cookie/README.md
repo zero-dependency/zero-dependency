@@ -29,7 +29,7 @@ cookies.set('name', 'value')
 cookies.set('name', 'value', { expires: 7 })
 
 // Create an expiring cookie, valid to the path of the current page
-Cookies.set('name', 'value', { expires: 7, path: '' })
+cookies.set('name', 'value', { expires: 7, path: '' })
 
 // Read cookie
 cookies.get('name')
