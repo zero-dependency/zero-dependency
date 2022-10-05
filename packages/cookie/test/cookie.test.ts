@@ -1,11 +1,6 @@
 import { describe, expect } from 'vitest'
 import { Cookie, cookies } from '../src/index.js'
 
-interface User {
-  id: number
-  name: string
-}
-
 describe('@zero-dependency/cookie', (test) => {
   const user = {
     id: 1,
@@ -21,14 +16,14 @@ describe('@zero-dependency/cookie', (test) => {
 
   test('set', () => {
     expect(document.cookie).toBe('')
-    cookies.set<User>('user', user, { maxAge: 7 })
+    cookies.set('user', user, { maxAge: 7 })
     expect(document.cookie).toBe(
       'user=%7B%22id%22%3A1%2C%22name%22%3A%22John%22%7D'
     )
   })
 
   test('get', () => {
-    expect(cookies.get<User>('user')).toMatchObject(user)
+    expect(cookies.get('user')).toMatchObject(user)
     expect(cookies.get('unknown')).toBeNull()
 
     document.cookie = 'empty='
@@ -38,8 +33,9 @@ describe('@zero-dependency/cookie', (test) => {
   })
 
   test('list', () => {
-    expect(cookies.list<{ user: User }>()).toEqual({
+    expect(cookies.list()).toEqual({
       user,
+      empty: null,
       bad: null
     })
   })

@@ -25,16 +25,8 @@ export class Cookie {
   }
 
   get<T = string>(name: string): T | null {
-    const parts = `; ${document.cookie}`.split(`; ${name}=`)
-
-    if (parts.length === 2) {
-      let value = parts.pop()?.split(';').shift()
-      if (value) {
-        return this.deserialize(decodeURIComponent(value))
-      }
-    }
-
-    return null
+    const cookie = `; ${document.cookie}`.match(`;\\s*${name}=([^;]+)`)
+    return cookie ? this.deserialize(decodeURIComponent(cookie[1]!)) : null
   }
 
   set<T = string>(name: string, value: T, attributes?: CookieAttributes): void {
@@ -72,15 +64,14 @@ export class Cookie {
   }
 
   list<T extends Record<string, any>>(): T | Record<string, any> {
-    return document.cookie.split(';').reduce((acc, cookie) => {
-      const [name, value] = cookie.split('=').map((v) => v.trim())
-      if (!name || !value) return acc
+    const cookies = document.cookie.split('; ').map((cookie) =>
+      cookie.split(/=(.*)/s).map((value, key) => {
+        value = decodeURIComponent(value)
+        return key === 0 ? value : this.deserialize(value)
+      })
+    )
 
-      return {
-        ...acc,
-        [decodeURIComponent(name)]: this.deserialize(decodeURIComponent(value))
-      }
-    }, {})
+    return Object.fromEntries(cookies)
   }
 
   delete(name: string, attributes?: CookieAttributes): void {
