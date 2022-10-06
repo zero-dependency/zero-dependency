@@ -22,29 +22,29 @@ pnpm add @zero-dependency/cookie
 ```js
 import { cookies } from '@zero-dependency/cookie'
 
-// Create a cookie
+// Create a cookie.
 cookies.set('name', 'value')
 
-// Create a cookie that expires 7 days from now
+// Create a cookie that expires 7 days from now.
 cookies.set('name', 'value', { expires: 7 })
 
-// Create an expiring cookie, valid to the path of the current page
+// Create an expiring cookie, valid to the path of the current page.
 cookies.set('name', 'value', { expires: 7, path: '' })
 
-// Read cookie
+// Read cookie.
 cookies.get('name')
 
-// Read all visible cookies
+// Read all visible cookies.
 cookies.list()
 
-// Delete cookie
+// Delete cookie.
 cookies.delete('name')
 
-// Delete a cookie valid to the path of the current page
+// Delete a cookie valid to the path of the current page.
 cookies.set('name', 'value', { path: '' })
 cookies.delete('name'); // fail!
 cookies.delete('name', { path: '' }); // success!
 
-// Cookie attribute defaults can be set globally
+// Cookie attribute defaults can be set globally.
 cookies.withAttributes({ path: '/', domain: '.example.com' })
 ```
