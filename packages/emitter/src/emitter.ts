@@ -20,8 +20,8 @@ export class Emitter<T extends EventMap> implements TypedEventEmitter<T> {
 
   once<E extends keyof T>(event: E, listener: T[E]): this {
     const onceListener = (...args: any[]) => {
-      listener(...args)
       this.off(event, onceListener as T[E])
+      listener(...args)
     }
 
     this.on(event, onceListener as T[E])
