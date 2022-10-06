@@ -20,6 +20,8 @@ pnpm add @zero-dependency/emitter
 ## Usage
 
 ```ts
+import { Emitter } from '@zero-dependency/emitter'
+
 type Events = {
   message: (msg: string) => void
 }
