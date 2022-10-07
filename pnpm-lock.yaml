@@ -37,10 +37,8 @@ importers:
   examples/dom:
     specifiers:
       '@zero-dependency/dom': workspace:*
-      redom: ^3.29.1
     dependencies:
       '@zero-dependency/dom': link:../../packages/dom
-      redom: 3.29.1
 
   examples/emitter:
     specifiers:
