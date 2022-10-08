@@ -1,12 +1,12 @@
 import { observeElement } from './observeElement.js'
 
-export function waitObserveElement(
+export function waitObserveElement<T extends Element = Element>(
   selector: string,
   disconnect = true,
   target = document.body
-): Promise<Element> {
+): Promise<T> {
   return new Promise((resolve) => {
-    const observer = observeElement(
+    const observer = observeElement<T>(
       selector,
       (el) => {
         if (disconnect) {

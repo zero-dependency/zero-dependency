@@ -1,15 +1,13 @@
-export function observeElement(
+export function observeElement<T extends Element = Element>(
   selector: string,
-  callback: (el: Element) => void,
+  callback: (el: T) => void,
   target = document.body
-) {
+): MutationObserver {
   const observer = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
-      for (const node of mutation.addedNodes) {
-        const el = node as Element
-        if (el.matches && el.matches(selector)) {
-          callback(el)
-        }
+      const el = (mutation.target as Element).querySelector(selector)
+      if (el) {
+        callback(el as T)
       }
     }
   })
