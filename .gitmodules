@@ -1,0 +1,16 @@
+[submodule "packages/emitter"]
+	path = packages/emitter
+	url = https://github.com/zero-dependency/emitter
+	branch = master
+[submodule "packages/dom"]
+	path = packages/dom
+	url = https://github.com/zero-dependency/dom
+	branch = master
+[submodule "packages/cookie"]
+	path = packages/cookie
+	url = https://github.com/zero-dependency/cookie
+	branch = master
+[submodule "packages/storage"]
+	path = packages/storage
+	url = https://github.com/zero-dependency/storage
+	branch = master
