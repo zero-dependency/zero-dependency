@@ -5,7 +5,6 @@ export default defineConfig({
     watch: false,
     threads: true,
     logHeapUsage: true,
-    environment: 'jsdom',
-    include: ['packages/**/*.test.ts']
+    environment: 'jsdom'
   }
 })
