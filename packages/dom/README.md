@@ -1,1 +1,0 @@
-# `@zero-dependency/dom`
