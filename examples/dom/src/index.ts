@@ -6,24 +6,23 @@ import {
 } from '@zero-dependency/dom'
 
 function createButton() {
-  const card = el('div', {
-    className: 'card'
-  })
-
   const button = el(
     'button',
     {
       onclick: () => {
-        const clonedCard = card.cloneNode()
-        const id = text(Math.random().toString(16).slice(2))
-        clonedCard.appendChild(id)
-        document.body.appendChild(clonedCard)
+        card.classList.add(Math.random().toString(16).slice(12))
       }
     },
     'Click me'
   )
+  const card = el('div', { className: 'card' })
+  const container = el('div', [
+    text('Hello World'),
+    card,
+    button
+  ])
 
-  document.body.appendChild(button)
+  document.body.appendChild(container)
 }
 
 async function bootstrap() {
