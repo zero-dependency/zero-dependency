@@ -46,6 +46,17 @@ importers:
     dependencies:
       '@zero-dependency/emitter': link:../../packages/emitter
 
+  examples/fetcher:
+    specifiers:
+      '@zero-dependency/dom': workspace:^0.4.0
+      typescript: ^4.6.4
+      vite: ^3.1.0
+    dependencies:
+      '@zero-dependency/dom': link:../../packages/dom
+    devDependencies:
+      typescript: 4.8.4
+      vite: 3.1.6
+
   examples/interact:
     specifiers:
       '@zero-dependency/interact': workspace:*
