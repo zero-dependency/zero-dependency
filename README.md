@@ -9,3 +9,4 @@
 | [@zero-dependency/emitter](https://github.com/zero-dependency/emitter) | [![](https://img.shields.io/npm/v/@zero-dependency/emitter)](https://npm.im/@zero-dependency/emitter) | Event Emitter |
 | [@zero-dependency/interact](./packages/interact/) | [![](https://img.shields.io/npm/v/@zero-dependency/interact)](https://npm.im/@zero-dependency/interact) | Moveable DOM elements |
 | [@zero-dependency/storage](https://github.com/zero-dependency/storage) | [![](https://img.shields.io/npm/v/@zero-dependency/storage)](https://npm.im/@zero-dependency/storage) | Storage API |
+| [@zero-dependency/utils](https://github.com/zero-dependency/utils) | [![](https://img.shields.io/npm/v/@zero-dependency/utils)](https://npm.im/@zero-dependency/utils) | Additional utilities |
