@@ -19,7 +19,9 @@ async function bootstrap() {
     'button',
     {
       onclick: async () => {
-        const response = await fetcher.get<Todo>('1')
+        const response = await fetcher.get<Todo>('1', {
+          headers: { Authorization: 'xxxxxx' }
+        })
         console.log(response)
       }
     },
