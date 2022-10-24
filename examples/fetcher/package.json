@@ -13,6 +13,6 @@
     "vite": "^3.1.0"
   },
   "dependencies": {
-    "@zero-dependency/dom": "workspace:^0.4.0"
+    "@zero-dependency/dom": "workspace:*"
   }
 }
