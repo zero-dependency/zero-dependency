@@ -28,6 +28,9 @@ async function bootstrap() {
     },
     { attributes: true }
   )
+
+  const card = await waitElement('.card')
+  console.log('waitElement:', card)
 }
 
 createButton()
