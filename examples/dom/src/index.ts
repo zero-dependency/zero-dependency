@@ -1,9 +1,4 @@
-import {
-  el,
-  observeElement,
-  text,
-  waitObserveElement
-} from '@zero-dependency/dom'
+import { el, observeElement, text, waitElement } from '@zero-dependency/dom'
 
 function createButton() {
   const button = el(
@@ -26,12 +21,13 @@ function createButton() {
 }
 
 async function bootstrap() {
-  observeElement('.card', (node) => {
-    console.log('observeElement:', node)
-  })
-
-  const card = await waitObserveElement('.card')
-  console.log('waitObserveElement:', card)
+  observeElement(
+    '.card',
+    (node) => {
+      console.log('observeElement:', node)
+    },
+    { attributes: true }
+  )
 }
 
 createButton()
