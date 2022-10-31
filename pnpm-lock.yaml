@@ -86,7 +86,7 @@ importers:
       vite-plugin-dts: ^1.6.5
       vitest: ^0.23.4
     devDependencies:
-      '@crashmax/prettier-config': 2.0.4_kh24rxe7vdex46rsdybx5uv35u
+      '@crashmax/prettier-config': 2.0.4_54bcyjeyccpir4qjdg4uzbivzq
       '@crashmax/tsconfig': 1.0.2
       '@types/node': 18.8.3
       '@vitest/coverage-c8': 0.24.0_gkhtrnfwk72a2xpsvrk7h3dcna
@@ -104,7 +104,7 @@ importers:
       '@types/node': ^18.8.3
       '@vitest/coverage-c8': ^0.24.0
       '@vitest/ui': ^0.23.4
-      '@zero-dependency/emitter': workspace:^1.1.1
+      '@zero-dependency/emitter': 1.1.1
       jsdom: ^20.0.1
       typescript: ^4.8.4
       vite: ^3.1.6
@@ -137,7 +137,7 @@ importers:
       vite-plugin-dts: ^1.6.5
       vitest: ^0.23.4
     devDependencies:
-      '@crashmax/prettier-config': 2.0.4_kh24rxe7vdex46rsdybx5uv35u
+      '@crashmax/prettier-config': 2.0.4_54bcyjeyccpir4qjdg4uzbivzq
       '@crashmax/tsconfig': 1.0.2
       '@types/node': 18.8.3
       '@vitest/coverage-c8': 0.24.0_gkhtrnfwk72a2xpsvrk7h3dcna
@@ -167,7 +167,7 @@ importers:
       vite-plugin-dts: ^1.6.5
       vitest: ^0.23.4
     devDependencies:
-      '@crashmax/prettier-config': 2.0.4_kh24rxe7vdex46rsdybx5uv35u
+      '@crashmax/prettier-config': 2.0.4_54bcyjeyccpir4qjdg4uzbivzq
       '@crashmax/tsconfig': 1.0.2
       '@types/node': 18.8.3
       '@vitest/coverage-c8': 0.24.0_gkhtrnfwk72a2xpsvrk7h3dcna
@@ -191,7 +191,7 @@ importers:
       vite-plugin-dts: ^1.6.5
       vitest: ^0.24.1
     devDependencies:
-      '@crashmax/prettier-config': 2.0.4_kh24rxe7vdex46rsdybx5uv35u
+      '@crashmax/prettier-config': 2.0.4_54bcyjeyccpir4qjdg4uzbivzq
       '@crashmax/tsconfig': 1.0.2
       '@types/node': 18.11.4
       '@vitest/coverage-c8': 0.24.3_i7ukxxwfoxepyk4smtl6oue4oi
@@ -335,11 +335,6 @@ packages:
       '@babel/types': 7.19.4
     dev: true
 
-  /@babel/helper-string-parser/7.18.10:
-    resolution: {integrity: sha512-XtIfWmeNY3i4t7t4D2t02q50HvqHybPqW2ki1kosnvWCwuCMeo81Jf0gwr85jy/neUdg5XDdeFE/80DXiO+njw==}
-    engines: {node: '>=6.9.0'}
-    dev: true
-
   /@babel/helper-string-parser/7.19.4:
     resolution: {integrity: sha512-nHtDoQcuqFmwYNYPz3Rah5ph2p8PFeFCsZk9A/48dPc/rGocJ5J3hAAZ7pb76VWX3fZKu+uEr/FhH5jLx7umrw==}
     engines: {node: '>=6.9.0'}
@@ -373,14 +368,6 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       chalk: 2.4.2
       js-tokens: 4.0.0
-    dev: true
-
-  /@babel/parser/7.17.8:
-    resolution: {integrity: sha512-BoHhDJrJXqcg+ZL16Xv39H9n+AqJ4pcDrQBGZN+wHxIysrLZ3/ECwCBUch/1zUNhnsXULcONU3Ei5Hmkfk6kiQ==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.19.3
     dev: true
 
   /@babel/parser/7.18.9:
@@ -452,15 +439,6 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@babel/types/7.19.3:
-    resolution: {integrity: sha512-hGCaQzIY22DJlDh9CH7NOxgKkFjBk0Cw9xDO1Xmh2151ti7wiGfQ3LauXzL4HP1fmFlTX6XjpRETTpUcv7wQLw==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.18.10
-      '@babel/helper-validator-identifier': 7.19.1
-      to-fast-properties: 2.0.0
-    dev: true
-
   /@babel/types/7.19.4:
     resolution: {integrity: sha512-M5LK7nAeS6+9j7hAq+b3fQs+pNfUtTGq+yFFfHnauFA8zQtLRfmuipmsKDKKLuyG+wC8ABW43A153YNawNTEtw==}
     engines: {node: '>=6.9.0'}
@@ -482,18 +460,6 @@ packages:
       prettier-plugin-multiline-arrays: ^1.1.0
     dependencies:
       '@trivago/prettier-plugin-sort-imports': 3.4.0_prettier@2.7.1
-      prettier: 2.7.1
-      prettier-plugin-multiline-arrays: 1.1.1
-    dev: true
-
-  /@crashmax/prettier-config/2.0.4_kh24rxe7vdex46rsdybx5uv35u:
-    resolution: {integrity: sha512-uO6KbButh8zkHP//Ne5D5CYh7FsdD5vznUyxFY62K8yXwGfHTvDQHzzhCbCoUuCoQj51G8pBO+JFly2PE3wl7Q==}
-    peerDependencies:
-      '@trivago/prettier-plugin-sort-imports': ^3.3.0
-      prettier: ^2.7.1
-      prettier-plugin-multiline-arrays: ^1.1.0
-    dependencies:
-      '@trivago/prettier-plugin-sort-imports': 3.3.0_prettier@2.7.1
       prettier: 2.7.1
       prettier-plugin-multiline-arrays: 1.1.1
     dev: true
@@ -737,23 +703,6 @@ packages:
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
-    dev: true
-
-  /@trivago/prettier-plugin-sort-imports/3.3.0_prettier@2.7.1:
-    resolution: {integrity: sha512-1y44bVZuIN0RsS3oIiGd5k8Vm3IZXYZnp4VsP2Z/S5L9WAOw43HE2clso66M2S/dDeJ+8sKPqnHsEfh39Vjs3w==}
-    peerDependencies:
-      prettier: 2.x
-    dependencies:
-      '@babel/core': 7.17.8
-      '@babel/generator': 7.17.7
-      '@babel/parser': 7.17.8
-      '@babel/traverse': 7.17.3
-      '@babel/types': 7.17.0
-      javascript-natural-sort: 0.7.1
-      lodash: 4.17.21
-      prettier: 2.7.1
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@trivago/prettier-plugin-sort-imports/3.4.0_prettier@2.7.1:
