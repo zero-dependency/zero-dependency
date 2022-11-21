@@ -1,10 +1,11 @@
 import { Fetcher, FetcherError, el } from '@zero-dependency/dom'
+// import './extends.js'
 
 async function bootstrap() {
   const headers = new Headers()
   headers.set('Content-Type', 'application/json')
 
-  const fetcher = new Fetcher('https://jsonplaceholder.typicode.com/todos/', {
+  const fetcher = new Fetcher('https://jsonplaceholder.typicode.com/todos', {
     headers
   })
 
@@ -19,7 +20,7 @@ async function bootstrap() {
     'button',
     {
       onclick: async () => {
-        const response = await fetcher.get<Todo>('1', {
+        const response = await fetcher.get<Todo>('/1', {
           headers: { Authorization: 'xxxxxx' }
         })
         console.log(response)
@@ -31,7 +32,7 @@ async function bootstrap() {
   document.body.appendChild(button)
 
   try {
-    await fetcher.get('/1')
+    await fetcher.get('../1')
   } catch (err) {
     if (err instanceof FetcherError) {
       console.log(err.response)
