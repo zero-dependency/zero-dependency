@@ -1,13 +1,24 @@
-import { Fetcher } from '@zero-dependency/dom'
+import { Fetcher } from '@zero-dependency/fetcher'
 
-const headers = new Headers()
-headers.set('Content-Type', 'application/json')
+interface Response {
+  body: string
+  email: string
+  id: number
+  name: string
+  postId: number
+}
 
-const baseApi = new Fetcher('https://jsonplaceholder.typicode.com', { headers })
+export function extendsApp() {
+  const headers = new Headers()
+  headers.set('Content-Type', 'application/json')
 
-headers.set('Authorization', 'xxx')
-const postsApi = baseApi.extends('/posts', { headers })
-postsApi.get('/1').then((res) => console.log('/posts/1', res))
+  const baseApi = new Fetcher('https://jsonplaceholder.typicode.com', { headers })
 
-const commentsApi = baseApi.extends('/comments')
-commentsApi.get('/1').then((res) => console.log('/comments/1', res))
+  headers.set('Authorization', 'xxx')
+  const postsApi = baseApi.extends('/posts', { headers })
+  postsApi.get<Response>('/1').then((res) => console.log('/posts/1', res))
+
+  headers.delete('Authorization')
+  const commentsApi = baseApi.extends('/comments', { headers })
+  commentsApi.get<Response>('/1').then((res) => console.log('/comments/1', res))
+}

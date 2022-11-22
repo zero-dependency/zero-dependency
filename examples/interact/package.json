@@ -8,8 +8,8 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@zero-dependency/dom": "workspace:*",
     "@zero-dependency/interact": "workspace:*",
-    "@zero-dependency/storage": "workspace:*",
-    "redom": "^3.29.1"
+    "@zero-dependency/storage": "workspace:*"
   }
 }

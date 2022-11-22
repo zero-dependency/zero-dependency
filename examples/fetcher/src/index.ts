@@ -1,7 +1,8 @@
-import { Fetcher, FetcherError, el } from '@zero-dependency/dom'
-// import './extends.js'
+import { el } from '@zero-dependency/dom'
+import { Fetcher, FetcherError } from '@zero-dependency/fetcher'
+import { extendsApp } from './extends.js'
 
-async function bootstrap() {
+async function mainApp() {
   const headers = new Headers()
   headers.set('Content-Type', 'application/json')
 
@@ -40,4 +41,5 @@ async function bootstrap() {
   }
 }
 
-bootstrap()
+mainApp()
+extendsApp()

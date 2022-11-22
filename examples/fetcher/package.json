@@ -13,6 +13,7 @@
     "vite": "^3.2.4"
   },
   "dependencies": {
-    "@zero-dependency/dom": "workspace:*"
+    "@zero-dependency/dom": "workspace:*",
+    "@zero-dependency/fetcher": "workspace:*"
   }
 }

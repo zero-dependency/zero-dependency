@@ -1,4 +1,4 @@
-import { el, mount } from 'redom'
+import { el } from '@zero-dependency/dom'
 import { Interact } from '@zero-dependency/interact'
 import { LocalStorage } from '@zero-dependency/storage'
 
@@ -15,7 +15,8 @@ const modal = el(
   {
     className: 'modal'
   },
-  [modalHeader, modalContainer]
+  modalHeader,
+  modalContainer
 )
 
 const overlay = el(
@@ -26,7 +27,7 @@ const overlay = el(
   modal
 )
 
-const store = LocalStorage('position', { x: 0, y: 0 })
+const store = new LocalStorage('position', { x: 0, y: 0 })
 
 const interact = new Interact(modal, {
   constrain: true,
@@ -38,7 +39,7 @@ const interact = new Interact(modal, {
   }
 })
 
-const { x, y } = store.values()
+const { x, y } = store.values
 interact.changePosition(x, y)
 
-mount(document.body, overlay)
+document.body.appendChild(overlay)

@@ -3,7 +3,7 @@ import { el, observeElement, text, waitElement } from '@zero-dependency/dom'
 function createButton() {
   const card = el('div', { className: 'card' })
 
-  const container = el('div', [text('Hello World'), card])
+  const container = el('div', text('Hello World'), card)
 
   const button = el(
     'button',
