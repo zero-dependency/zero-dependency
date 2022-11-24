@@ -4,6 +4,7 @@
 
 | Package | Version | Size | Description |
 | ------- | ------- | ---- | ----------- |
+| [@zero-dependency/fetcher](https://github.com/zero-dependency/fetcher) | [![](https://img.shields.io/npm/v/@zero-dependency/fetcher)](https://npm.im/@zero-dependency/fetcher) | [![](https://img.shields.io/bundlephobia/minzip/@zero-dependency/fetcher)](https://bundlephobia.com/package/@zero-dependency/fetcher@latest) | 🏃‍♂️ Wrapper over fetch api, typed response, interceptors. |
 | [@zero-dependency/cookie](https://github.com/zero-dependency/cookie) | [![](https://img.shields.io/npm/v/@zero-dependency/cookie)](https://npm.im/@zero-dependency/cookie) | [![](https://img.shields.io/bundlephobia/minzip/@zero-dependency/cookie)](https://bundlephobia.com/package/@zero-dependency/cookie@latest) | 🍪 document.cookie API. |
 | [@zero-dependency/dom](https://github.com/zero-dependency/dom) | [![](https://img.shields.io/npm/v/@zero-dependency/dom)](https://npm.im/@zero-dependency/dom) | [![](https://img.shields.io/bundlephobia/minzip/@zero-dependency/dom)](https://bundlephobia.com/package/@zero-dependency/dom@latest) | 📄 DOM utilities for each day. |
 | [@zero-dependency/emitter](https://github.com/zero-dependency/emitter) | [![](https://img.shields.io/npm/v/@zero-dependency/emitter)](https://npm.im/@zero-dependency/emitter) | [![](https://img.shields.io/bundlephobia/minzip/@zero-dependency/emitter)](https://bundlephobia.com/package/@zero-dependency/emitter@latest) | ✍️ Event Emitter, like Node.js implementation. |
