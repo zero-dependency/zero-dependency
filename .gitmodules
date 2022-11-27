@@ -21,3 +21,4 @@
 [submodule "packages/fetcher"]
 	path = packages/fetcher
 	url = https://github.com/zero-dependency/fetcher
+	branch = master
