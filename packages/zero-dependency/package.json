@@ -1,6 +1,6 @@
 {
   "name": "zero-dependency",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.umd.js",
@@ -43,9 +43,9 @@
     "@zero-dependency/cookie": "workspace:1.3.2",
     "@zero-dependency/dom": "workspace:0.12.0",
     "@zero-dependency/emitter": "workspace:1.1.3",
-    "@zero-dependency/fetcher": "workspace:0.1.1",
+    "@zero-dependency/fetcher": "workspace:0.1.2",
     "@zero-dependency/interact": "workspace:0.1.3",
-    "@zero-dependency/storage": "workspace:0.2.2",
+    "@zero-dependency/storage": "workspace:0.3.0",
     "@zero-dependency/utils": "workspace:0.2.3"
   }
 }
