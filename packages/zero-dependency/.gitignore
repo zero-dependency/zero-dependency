@@ -2,3 +2,6 @@
 **/.turbo
 **/dist
 *.log
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
