@@ -2,6 +2,10 @@
   "name": "@zero-dependency/monorepo",
   "private": true,
   "version": "0.0.0",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
   "scripts": {
     "dev": "turbo run dev --filter='./packages/*'",
     "build": "turbo run build --filter='./packages/*'",
