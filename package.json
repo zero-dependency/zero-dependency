@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "turbo run dev --filter='./packages/*'",
     "build": "turbo run build --filter='./packages/*'",
-    "test": "vitest --coverage",
+    "test": "pnpm build && vitest --coverage",
     "test:watch": "vitest --ui --watch --coverage",
     "format": "prettier --write --ignore-unknown **"
   },
