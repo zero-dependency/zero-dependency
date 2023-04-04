@@ -22,3 +22,7 @@
 	path = packages/fetcher
 	url = https://github.com/zero-dependency/fetcher
 	branch = master
+[submodule "packages/react"]
+	path = packages/react
+	url = https://github.com/zero-dependency/react
+	branch = master

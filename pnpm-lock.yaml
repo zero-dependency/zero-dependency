@@ -234,6 +234,39 @@ importers:
         specifier: ^1.4.1
         version: 1.4.1
 
+  packages/react:
+    devDependencies:
+      '@crashmax/prettier-config':
+        specifier: ^3.2.1
+        version: 3.2.1(@ianvs/prettier-plugin-sort-imports@3.7.1)(prettier-plugin-multiline-arrays@1.1.2)(prettier@2.8.1)
+      '@crashmax/tsconfig':
+        specifier: ^2.0.1
+        version: 2.0.1
+      '@types/node':
+        specifier: ^18.15.11
+        version: 18.15.11
+      '@vitest/coverage-c8':
+        specifier: ^0.29.8
+        version: 0.29.8(vitest@0.29.8)
+      '@vitest/ui':
+        specifier: ^0.29.8
+        version: 0.29.8
+      jsdom:
+        specifier: ^21.1.1
+        version: 21.1.1
+      typescript:
+        specifier: ^5.0.2
+        version: 5.0.2
+      vite:
+        specifier: ^4.2.1
+        version: 4.2.1(@types/node@18.15.11)
+      vite-plugin-dts:
+        specifier: ^2.1.0
+        version: 2.1.0(@types/node@18.15.11)(vite@4.2.1)
+      vitest:
+        specifier: ^0.29.8
+        version: 0.29.8(@vitest/ui@0.29.8)(jsdom@21.1.1)
+
   packages/storage:
     devDependencies:
       '@crashmax/prettier-config':
