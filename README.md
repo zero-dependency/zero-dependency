@@ -10,6 +10,7 @@
 | [@zero-dependency/emitter](https://github.com/zero-dependency/emitter) | [![](https://img.shields.io/npm/v/@zero-dependency/emitter)](https://npm.im/@zero-dependency/emitter) | [![](https://img.shields.io/bundlephobia/minzip/@zero-dependency/emitter)](https://bundlephobia.com/package/@zero-dependency/emitter@latest) | ✍️ Event Emitter |
 | [@zero-dependency/dom](https://github.com/zero-dependency/dom) | [![](https://img.shields.io/npm/v/@zero-dependency/dom)](https://npm.im/@zero-dependency/dom) | [![](https://img.shields.io/bundlephobia/minzip/@zero-dependency/dom)](https://bundlephobia.com/package/@zero-dependency/dom@latest) | 📄 DOM utilities |
 | [@zero-dependency/utils](https://github.com/zero-dependency/utils) | [![](https://img.shields.io/npm/v/@zero-dependency/utils)](https://npm.im/@zero-dependency/utils) | [![](https://img.shields.io/bundlephobia/minzip/@zero-dependency/utils)](https://bundlephobia.com/package/@zero-dependency/utils@latest) | 🛠 Additional utilities |
+| [@zero-dependency/react](https://github.com/zero-dependency/react) | [![](https://img.shields.io/npm/v/@zero-dependency/react)](https://npm.im/@zero-dependency/react) | [![](https://img.shields.io/bundlephobia/minzip/@zero-dependency/react)](https://bundlephobia.com/package/@zero-dependency/react@latest) | ⚛️ React hooks, utilities |
 
 ## Contributing
 
