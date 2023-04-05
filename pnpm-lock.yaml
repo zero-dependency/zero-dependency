@@ -235,6 +235,10 @@ importers:
         version: 1.4.1
 
   packages/react:
+    dependencies:
+      '@zero-dependency/storage':
+        specifier: workspace:1.1.0
+        version: link:../storage
     devDependencies:
       '@crashmax/prettier-config':
         specifier: ^3.2.1
