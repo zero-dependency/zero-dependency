@@ -6,10 +6,10 @@ interface User {
 }
 
 const cookies = new Cookie({
-  serialize(value) {
+  decode(value) {
     return JSON.stringify(value)
   },
-  deserialize(value) {
+  encode(value) {
     try {
       return JSON.parse(value)
     } catch {
