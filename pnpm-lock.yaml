@@ -367,7 +367,7 @@ importers:
   packages/zero-dependency:
     dependencies:
       '@zero-dependency/cookie':
-        specifier: workspace:1.3.2
+        specifier: workspace:1.4.0
         version: link:../cookie
       '@zero-dependency/dom':
         specifier: workspace:1.3.0
