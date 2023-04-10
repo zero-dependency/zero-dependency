@@ -24,20 +24,20 @@
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",
-    "test": "vitest",
+    "test": "vitest run --coverage",
     "test:watch": "vitest --ui --watch --coverage",
     "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
     "@crashmax/tsconfig": "^2.0.1",
     "@types/node": "^18.15.11",
-    "@vitest/coverage-c8": "^0.29.8",
-    "@vitest/ui": "^0.29.8",
+    "@vitest/coverage-c8": "^0.30.0",
+    "@vitest/ui": "^0.30.0",
     "jsdom": "^21.1.1",
-    "typescript": "^5.0.2",
+    "typescript": "^5.0.4",
     "vite": "^4.2.1",
-    "vite-plugin-dts": "^2.1.0",
-    "vitest": "^0.29.8"
+    "vite-plugin-dts": "^2.2.0",
+    "vitest": "^0.30.0"
   },
   "dependencies": {
     "@zero-dependency/cookie": "workspace:1.5.0",
