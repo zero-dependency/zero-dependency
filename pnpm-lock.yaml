@@ -413,7 +413,7 @@ importers:
         specifier: workspace:1.1.0
         version: link:../storage
       '@zero-dependency/utils':
-        specifier: workspace:1.1.0
+        specifier: workspace:1.2.0
         version: link:../utils
     devDependencies:
       '@crashmax/tsconfig':
