@@ -1,7 +1,9 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
-import { name } from './package.json'
+import { dependencies, name } from './package.json'
+
+const deps = Object.keys(dependencies)
 
 export default defineConfig({
   plugins: [dts()],
@@ -18,6 +20,16 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       fileName: (format) => `index.${format}.js`,
       name
+    },
+    rollupOptions: {
+      external: deps,
+      output: {
+        globals: deps.reduce<Record<string, string>>((acc, value) => {
+          const [_, name] = value.split('/')
+          acc[value] = name
+          return acc
+        }, {})
+      }
     }
   }
 })
