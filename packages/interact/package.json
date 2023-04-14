@@ -1,19 +1,42 @@
 {
   "name": "@zero-dependency/interact",
-  "version": "0.1.3",
+  "version": "0.1.4",
+  "description": "Zero Dependency library for creating interactive elements",
   "type": "module",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.umd.js",
+  "main": "./dist/index.cjs.js",
+  "jsdelivr": "./dist/index.umd.js",
+  "unpkg": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
+  "exports": {
+    "require": "./dist/index.cjs.js",
+    "import": "./dist/index.es.js"
+  },
   "files": [
     "dist"
   ],
+  "keywords": [
+    "interact",
+    "interactive",
+    "displacejs",
+    "zero-dependency"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zero-dependency",
+  "bugs": {
+    "url": "https://github.com/zero-dependency/issues"
+  },
+  "author": {
+    "name": "Vitalij Ryndin",
+    "email": "sys@crashmax.ru",
+    "url": "https://crashmax.ru"
+  },
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",
     "prepublishOnly": "pnpm build"
   },
   "dependencies": {
-    "displacejs": "^1.4.1"
+    "displacejs": "1.4.1"
   }
 }

@@ -1,21 +1,38 @@
 {
   "name": "zero-dependency",
-  "version": "0.1.2",
+  "version": "0.1.3",
+  "description": "Zero Dependency packages",
   "type": "module",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.umd.js",
+  "main": "./dist/index.cjs.js",
+  "jsdelivr": "./dist/index.umd.js",
+  "unpkg": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "exports": {
-    ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
-    }
+    "require": "./dist/index.cjs.js",
+    "import": "./dist/index.es.js"
   },
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/zero-dependency/zero-dependency",
+  "keywords": [
+    "zero-dependency",
+    "zero",
+    "dependency",
+    "utils",
+    "dom",
+    "storage",
+    "cookie",
+    "fetcher",
+    "emitter",
+    "interact",
+    "react"
+  ],
   "license": "MIT",
+  "homepage": "https://github.com/zero-dependency",
+  "bugs": {
+    "url": "https://github.com/zero-dependency/issues"
+  },
   "author": {
     "name": "Vitalij Ryndin",
     "email": "sys@crashmax.ru",
@@ -29,24 +46,24 @@
     "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
-    "@crashmax/tsconfig": "^2.0.1",
-    "@types/node": "^18.15.11",
-    "@vitest/coverage-c8": "^0.30.0",
-    "@vitest/ui": "^0.30.0",
-    "jsdom": "^21.1.1",
-    "typescript": "^5.0.4",
-    "vite": "^4.2.1",
-    "vite-plugin-dts": "^2.2.0",
-    "vitest": "^0.30.0"
+    "@crashmax/tsconfig": "2.0.1",
+    "@types/node": "18.15.11",
+    "@vitest/coverage-c8": "0.30.1",
+    "@vitest/ui": "0.30.1",
+    "jsdom": "21.1.1",
+    "typescript": "5.0.4",
+    "vite": "4.2.1",
+    "vite-plugin-dts": "2.2.0",
+    "vitest": "0.30.1"
   },
   "dependencies": {
-    "@zero-dependency/cookie": "workspace:1.5.0",
-    "@zero-dependency/dom": "workspace:1.3.0",
-    "@zero-dependency/emitter": "workspace:1.1.5",
-    "@zero-dependency/fetcher": "workspace:1.0.0",
-    "@zero-dependency/interact": "workspace:0.1.3",
-    "@zero-dependency/react": "workspace:0.7.0",
-    "@zero-dependency/storage": "workspace:1.1.0",
-    "@zero-dependency/utils": "workspace:1.2.0"
+    "@zero-dependency/cookie": "workspace:1.5.1",
+    "@zero-dependency/dom": "workspace:1.3.1",
+    "@zero-dependency/emitter": "workspace:1.1.6",
+    "@zero-dependency/fetcher": "workspace:1.0.1",
+    "@zero-dependency/interact": "workspace:0.1.4",
+    "@zero-dependency/react": "workspace:0.7.1",
+    "@zero-dependency/storage": "workspace:1.1.1",
+    "@zero-dependency/utils": "workspace:1.2.1"
   }
 }
