@@ -397,7 +397,7 @@ importers:
         specifier: workspace:1.0.1
         version: link:../fetcher
       '@zero-dependency/interact':
-        specifier: workspace:0.1.4
+        specifier: workspace:0.1.5
         version: link:../interact
       '@zero-dependency/react':
         specifier: workspace:0.7.1
