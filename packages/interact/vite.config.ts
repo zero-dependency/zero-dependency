@@ -6,6 +6,8 @@ import { name } from './package.json'
 export default defineConfig({
   plugins: [dts()],
   build: {
+    sourcemap: true,
+    minify: true,
     target: 'esnext',
     lib: {
       formats: [
@@ -16,6 +18,14 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       fileName: (format) => `index.${format}.js`,
       name
+    },
+    rollupOptions: {
+      external: ['displacejs'],
+      output: {
+        globals: {
+          displacejs: 'displacejs'
+        }
+      }
     }
   }
 })
