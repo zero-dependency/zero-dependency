@@ -400,7 +400,7 @@ importers:
         specifier: workspace:0.1.5
         version: link:../interact
       '@zero-dependency/react':
-        specifier: workspace:0.8.0
+        specifier: workspace:0.9.0
         version: link:../react
       '@zero-dependency/storage':
         specifier: workspace:1.1.2
