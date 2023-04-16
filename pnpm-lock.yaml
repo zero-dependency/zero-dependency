@@ -398,7 +398,7 @@ importers:
         specifier: workspace:1.1.6
         version: link:../emitter
       '@zero-dependency/fetcher':
-        specifier: workspace:1.0.1
+        specifier: workspace:1.1.0
         version: link:../fetcher
       '@zero-dependency/interact':
         specifier: workspace:0.1.5
