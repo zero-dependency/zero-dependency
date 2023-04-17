@@ -111,7 +111,7 @@ importers:
   packages/cookie:
     dependencies:
       '@zero-dependency/utils':
-        specifier: workspace:1.2.1
+        specifier: workspace:1.2.2
         version: link:../utils
     devDependencies:
       '@crashmax/prettier-config':
@@ -256,7 +256,7 @@ importers:
   packages/react:
     dependencies:
       '@zero-dependency/cookie':
-        specifier: workspace:1.7.0
+        specifier: workspace:1.7.1
         version: link:../cookie
       '@zero-dependency/storage':
         specifier: workspace:1.1.2
@@ -389,7 +389,7 @@ importers:
   packages/zero-dependency:
     dependencies:
       '@zero-dependency/cookie':
-        specifier: workspace:1.7.0
+        specifier: workspace:1.7.1
         version: link:../cookie
       '@zero-dependency/dom':
         specifier: workspace:1.4.0
@@ -410,7 +410,7 @@ importers:
         specifier: workspace:1.1.2
         version: link:../storage
       '@zero-dependency/utils':
-        specifier: workspace:1.2.1
+        specifier: workspace:1.2.2
         version: link:../utils
     devDependencies:
       '@crashmax/tsconfig':
