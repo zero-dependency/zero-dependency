@@ -41,5 +41,5 @@ async function mainApp() {
   }
 }
 
-// mainApp()
+mainApp()
 extendsApp()

@@ -39,7 +39,7 @@ const interact = new Interact(modal, {
   }
 })
 
-const { x, y } = store.values
+const { x, y } = store.value
 interact.changePosition(x, y)
 
 document.body.appendChild(overlay)

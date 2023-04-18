@@ -256,7 +256,7 @@ importers:
   packages/react:
     dependencies:
       '@zero-dependency/cookie':
-        specifier: workspace:1.7.1
+        specifier: workspace:1.8.0
         version: link:../cookie
       '@zero-dependency/storage':
         specifier: workspace:1.2.0
@@ -389,7 +389,7 @@ importers:
   packages/zero-dependency:
     dependencies:
       '@zero-dependency/cookie':
-        specifier: workspace:1.7.1
+        specifier: workspace:1.8.0
         version: link:../cookie
       '@zero-dependency/dom':
         specifier: workspace:1.4.0
