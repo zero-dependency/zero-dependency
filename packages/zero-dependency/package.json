@@ -62,7 +62,7 @@
     "@zero-dependency/emitter": "workspace:1.1.6",
     "@zero-dependency/fetcher": "workspace:1.1.0",
     "@zero-dependency/interact": "workspace:0.1.5",
-    "@zero-dependency/react": "workspace:0.11.0",
+    "@zero-dependency/react": "workspace:0.12.0",
     "@zero-dependency/storage": "workspace:1.2.0",
     "@zero-dependency/utils": "workspace:1.2.2"
   }
