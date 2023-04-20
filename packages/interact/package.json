@@ -34,7 +34,7 @@
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",
-    "prepublishOnly": "pnpm build"
+    "format": "prettier --write --ignore-unknown **"
   },
   "dependencies": {
     "displacejs": "1.4.1"

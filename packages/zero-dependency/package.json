@@ -42,8 +42,7 @@
     "dev": "vite build --watch",
     "build": "vite build",
     "test": "vitest run --coverage",
-    "test:watch": "vitest --ui --watch --coverage",
-    "prepublishOnly": "pnpm build"
+    "test:watch": "vitest --ui --watch --coverage"
   },
   "devDependencies": {
     "@crashmax/tsconfig": "2.0.1",
