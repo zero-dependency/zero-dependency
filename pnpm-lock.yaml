@@ -261,6 +261,12 @@ importers:
       '@zero-dependency/storage':
         specifier: workspace:1.2.0
         version: link:../storage
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
     devDependencies:
       '@crashmax/prettier-config':
         specifier: 3.2.1
@@ -301,12 +307,6 @@ importers:
       jsdom:
         specifier: 21.1.1
         version: 21.1.1
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
       typescript:
         specifier: 5.0.4
         version: 5.0.4
