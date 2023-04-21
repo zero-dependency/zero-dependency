@@ -4,14 +4,15 @@
   "description": "Zero Dependency packages",
   "type": "module",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs.js",
-  "jsdelivr": "./dist/index.umd.js",
-  "unpkg": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "exports": {
-    "require": "./dist/index.cjs.js",
-    "import": "./dist/index.es.js"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
   },
+  "sideEffects": false,
   "files": [
     "dist"
   ],

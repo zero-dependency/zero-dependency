@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
-import { name } from './package.json'
+import { dependencies, name } from './package.json'
 
 export default defineConfig({
   plugins: [dts()],
@@ -10,18 +10,13 @@ export default defineConfig({
     minify: true,
     target: 'esnext',
     lib: {
-      formats: ['cjs', 'es'],
+      formats: ['es', 'cjs'],
       entry: resolve(__dirname, 'src/index.ts'),
-      fileName: (format) => `index.${format}.js`,
+      fileName: 'index',
       name
     },
     rollupOptions: {
-      external: ['displacejs'],
-      output: {
-        globals: {
-          displacejs: 'displacejs'
-        }
-      }
+      external: Object.keys(dependencies)
     }
   }
 })

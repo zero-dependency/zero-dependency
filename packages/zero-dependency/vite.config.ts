@@ -10,9 +10,9 @@ export default defineConfig({
     minify: true,
     target: 'esnext',
     lib: {
-      formats: ['cjs', 'es'],
+      formats: ['es', 'cjs'],
       entry: resolve(__dirname, 'src/index.ts'),
-      fileName: (format) => `index.${format}.js`,
+      fileName: 'index',
       name
     },
     rollupOptions: {
