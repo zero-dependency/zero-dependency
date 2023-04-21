@@ -1,15 +1,17 @@
 import { Cookie } from '@zero-dependency/cookie'
 
 interface User {
-  id: number
-  name: string
+  [username: string]: {
+    id: number
+    name: string
+  }
 }
 
-const cookies = new Cookie({
-  decode(value) {
+const cookies = new Cookie<User>({
+  encode(value) {
     return JSON.stringify(value)
   },
-  encode(value) {
+  decode(value) {
     try {
       return JSON.parse(value)
     } catch {
@@ -19,4 +21,4 @@ const cookies = new Cookie({
 })
 
 cookies.set('le_xot', { id: 1, name: 'Lesha' }, { expires: 7 })
-console.log(cookies.get<User>('le_xot'))
+console.log(cookies.get('le_xot'))
