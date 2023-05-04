@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "@zero-dependency/cookie": "workspace:1.11.1",
-    "@zero-dependency/dom": "workspace:1.5.2",
+    "@zero-dependency/dom": "workspace:1.6.0",
     "@zero-dependency/emitter": "workspace:1.2.1",
     "@zero-dependency/fetcher": "workspace:1.2.2",
     "@zero-dependency/interact": "workspace:0.2.1",

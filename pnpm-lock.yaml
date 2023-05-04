@@ -146,6 +146,10 @@ importers:
         version: 0.30.1(@vitest/ui@0.30.1)(jsdom@21.1.1)
 
   packages/dom:
+    dependencies:
+      csstype:
+        specifier: 3.1.2
+        version: 3.1.2
     devDependencies:
       '@crashmax/prettier-config':
         specifier: 3.2.1
@@ -392,7 +396,7 @@ importers:
         specifier: workspace:1.11.1
         version: link:../cookie
       '@zero-dependency/dom':
-        specifier: workspace:1.5.2
+        specifier: workspace:1.6.0
         version: link:../dom
       '@zero-dependency/emitter':
         specifier: workspace:1.2.1
@@ -1696,7 +1700,6 @@ packages:
 
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
-    dev: true
 
   /data-urls@4.0.0:
     resolution: {integrity: sha512-/mMTei/JXPqvFqQtfyTowxmJVwr2PVAeCcDxyFf6LhoOu/09TX2OX3kb2wzi4DMXcfj4OItwDOnhl5oziPnT6g==}
