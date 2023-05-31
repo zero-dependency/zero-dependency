@@ -1,6 +1,6 @@
 {
   "name": "zero-dependency",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Zero Dependency packages",
   "type": "module",
   "types": "./dist/index.d.ts",
