@@ -9,7 +9,10 @@ export function App() {
     return Object.entries(routes)
       .slice(2) // slice home and notFound
       .map(([pathname, route]) => (
-        <a {...toPathname(pathname)}>
+        <a
+          key={pathname}
+          {...toPathname(pathname)}
+        >
           <button key={pathname}>{route.title}</button>
         </a>
       ))

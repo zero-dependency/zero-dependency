@@ -1,6 +1,7 @@
 import { BaseRoutes, Route } from './hooks/useRouter'
 import { UseCookie } from './pages/use-cookie'
 import { UseDidUpdate } from './pages/use-did-update'
+import { UseInterval } from './pages/use-interval.js'
 
 export const routes: Record<string, Route> = {
   [BaseRoutes.NOT_FOUND]: {
@@ -25,5 +26,9 @@ export const routes: Record<string, Route> = {
   '/use-did-update': {
     title: 'useDidUpdate',
     component: <UseDidUpdate />
+  },
+  '/use-interval': {
+    title: 'useInterval',
+    component: <UseInterval />
   }
 }

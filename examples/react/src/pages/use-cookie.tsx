@@ -15,10 +15,12 @@ export function UseCookie() {
     setCookie,
     removeCookie
   ] = useCookie<CookieData>({
-    encode(value) {
+    encode(value, key) {
+      if (key === 'theme') return value
       return JSON.stringify(value)
     },
-    decode(value) {
+    decode(value, key) {
+      if (key === 'theme') return value
       try {
         return JSON.parse(value)
       } catch {
