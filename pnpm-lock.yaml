@@ -82,6 +82,9 @@ importers:
 
   examples/react:
     dependencies:
+      '@crashmax/json-format-highlight':
+        specifier: ^1.1.0
+        version: 1.1.0
       '@zero-dependency/react':
         specifier: workspace:^
         version: link:../../packages/react
@@ -701,6 +704,10 @@ packages:
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
+
+  /@crashmax/json-format-highlight@1.1.0:
+    resolution: {integrity: sha512-t74op3IX4fFlsshLkqlb4q8nAoXtd6den/LZ+Zl06foiCaSx+1v3tGKXZFCaoY9Edpxaco9d2ddHMUV7C6LSZg==}
+    dev: false
 
   /@crashmax/prettier-config@3.2.1(@ianvs/prettier-plugin-sort-imports@3.7.1)(prettier-plugin-multiline-arrays@1.1.2)(prettier@2.8.1):
     resolution: {integrity: sha512-SGyKMp90ugeaJeyJLDFC2bwvgAN+Pcm1pMCPwIBm0xx1Pdcf0sJbg5as6kUJXkMfZzDD0DMzP5R/y1SINWn9yw==}

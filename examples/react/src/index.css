@@ -1,0 +1,48 @@
+body {
+  background-color: #1a1b1e;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a,
+a:visited {
+  color: #099cff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4dabf7;
+  text-decoration: underline;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: #099cff;
+  color: inherit;
+  transition: background-color ease-in 150ms;
+}
+
+button:hover {
+  background-color: #0078cd;
+}
+
+a > button {
+  color: #fff !important;
+}
+
+.flexible-gap {
+  display: flex;
+  gap: 8px;
+}
+
+/* highlightJson */
+code > pre {
+  padding: 10px;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #373a40;
+}
+/* highlightJson */

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@crashmax/json-format-highlight": "^1.1.0",
     "@zero-dependency/react": "workspace:^",
     "react": "18.2.0",
     "react-dom": "18.2.0"
