@@ -8,6 +8,6 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@zero-dependency/cookie": "workspace:*"
+    "@zero-dependency/cookie": "workspace:^"
   }
 }

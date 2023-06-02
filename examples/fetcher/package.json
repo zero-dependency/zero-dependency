@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@zero-dependency/dom": "workspace:*",
-    "@zero-dependency/fetcher": "workspace:*"
+    "@zero-dependency/dom": "workspace:^",
+    "@zero-dependency/fetcher": "workspace:^"
   }
 }

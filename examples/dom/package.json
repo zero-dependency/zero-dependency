@@ -8,6 +8,6 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@zero-dependency/dom": "workspace:*"
+    "@zero-dependency/dom": "workspace:^"
   }
 }
