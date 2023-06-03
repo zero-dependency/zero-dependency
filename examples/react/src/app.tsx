@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
-import { Gap } from './components/Flex'
+import { Container } from './components/container'
+import { FlexWrap } from './components/flex-wrap'
 import { useRouter } from './hooks/useRouter'
 import { routes } from './routes'
 
@@ -20,8 +21,10 @@ export function App() {
 
   return (
     <div>
-      <Gap>{navigation}</Gap>
-      <Route />
+      <FlexWrap>{navigation}</FlexWrap>
+      <Container>
+        <Route />
+      </Container>
     </div>
   )
 }

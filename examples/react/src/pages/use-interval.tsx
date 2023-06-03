@@ -14,7 +14,7 @@ export function UseInterval() {
   )
 
   return (
-    <div>
+    <>
       <h1>Value: {value}</h1>
       <h1>Interval: {interval}</h1>
       <input
@@ -25,6 +25,6 @@ export function UseInterval() {
         value={interval}
         onChange={handleChangeInterval}
       />
-    </div>
+    </>
   )
 }

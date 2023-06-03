@@ -1,48 +1,140 @@
+:root {
+  --indent-size: 10px;
+  --border-radius: 4px;
+  --border: 1px solid #373a40;
+  --color-white: #ffffff;
+  --color-blue: #099cff;
+  --color-blue-light: #0078cd;
+  --color-dark: #25262b;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
+  margin: var(--indent-size);
   background-color: #1a1b1e;
-  color: #fff;
+  color: var(--color-white);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-a,
-a:visited {
-  color: #099cff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #4dabf7;
-  text-decoration: underline;
 }
 
 button {
   outline: none;
   border: none;
   padding: 8px 10px;
-  border-radius: 2px;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  background-color: #099cff;
+  background-color: var(--color-blue);
   color: inherit;
   transition: background-color ease-in 150ms;
 }
 
 button:hover {
-  background-color: #0078cd;
+  background-color: var(--color-blue-light);
 }
 
 a > button {
-  color: #fff !important;
+  color: var(--color-white);
 }
 
-.flexible-gap {
+input[type='text'] {
+  font-size: 1rem;
+  padding: var(--indent-size);
+  outline: none;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+h1 {
+  word-wrap: break-word;
+}
+
+.flex-wrap {
   display: flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: var(--indent-size);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--indent-size);
+  margin-top: var(--indent-size);
+  padding: var(--indent-size);
+  border-radius: var(--border-radius);
+  border: 1px dashed var(--color-white);
 }
 
 /* highlightJson */
 code > pre {
-  padding: 10px;
-  border-radius: 0.5rem;
-  border: 0.0625rem solid #373a40;
+  padding: var(--indent-size);
+  border-radius: var(--indent-size);
+  border: var(--border);
 }
 /* highlightJson */
+
+/*********** Baseline, reset styles ***********/
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Removes default focus */
+input[type='range']:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* https://range-input-css.netlify.app */
+/* slider track */
+input[type='range']::-webkit-slider-runnable-track {
+  background-color: var(--color-blue-light);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: var(--color-blue);
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type='range']:focus::-webkit-slider-thumb {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type='range']::-moz-range-track {
+  background-color: var(--color-blue-light);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type='range']::-moz-range-thumb {
+  background-color: var(--color-blue);
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type='range']:focus::-moz-range-thumb {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 0.125rem;
+}

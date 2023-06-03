@@ -1,6 +1,6 @@
 import { useCookie, useEvent } from '@zero-dependency/react'
-import { Gap } from '../components/Flex'
-import { JsonPreview } from '../components/JsonPreview.js'
+import { FlexWrap } from '../components/flex-wrap'
+import { JsonPreview } from '../components/json-preview'
 
 interface CookieData {
   theme: 'dark' | 'light'
@@ -47,14 +47,14 @@ export function UseCookie() {
   )
 
   return (
-    <div>
+    <>
       <h1>Theme: {cookies.theme}</h1>
-      <Gap>
+      <FlexWrap>
         <button onClick={() => toggleCookie()}>Toggle</button>
         <button onClick={() => removeCookie('theme')}>Remove</button>
         <button onClick={() => countValue()}>Count</button>
-      </Gap>
+      </FlexWrap>
       <JsonPreview json={cookies} />
-    </div>
+    </>
   )
 }

@@ -11,7 +11,7 @@ export function JsonPreview(props: JsonPreviewProps) {
       tagPre: true,
       wordWrap: false,
       colors: {
-        backgroundColor: '#25262b',
+        backgroundColor: 'var(--background-color)',
         falseColor: '#f44747'
       }
     })

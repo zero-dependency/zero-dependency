@@ -1,7 +1,9 @@
 import { BaseRoutes, Route } from './hooks/useRouter'
 import { UseCookie } from './pages/use-cookie'
 import { UseDidUpdate } from './pages/use-did-update'
-import { UseInterval } from './pages/use-interval.js'
+import { UseInterval } from './pages/use-interval'
+import { UseLatest } from './pages/use-latest.js'
+import { UseLocalStorage } from './pages/use-local-storage'
 
 export const routes: Record<string, Route> = {
   [BaseRoutes.NOT_FOUND]: {
@@ -30,5 +32,13 @@ export const routes: Record<string, Route> = {
   '/use-interval': {
     title: 'useInterval',
     component: <UseInterval />
+  },
+  '/use-local-storage': {
+    title: 'useLocalStorage',
+    component: <UseLocalStorage />
+  },
+  '/use-latest': {
+    title: 'useLatest',
+    component: <UseLatest />
   }
 }
