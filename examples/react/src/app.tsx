@@ -1,29 +1,15 @@
-import { useMemo } from 'react'
 import { Container } from './components/container'
-import { FlexWrap } from './components/flex-wrap'
-import { useRouter } from './hooks/useRouter'
-import { routes } from './routes'
+import { Navigation } from './components/navigation'
+import { useRouter } from './libs/router/hook'
 
 export function App() {
-  const { Route, toPathname } = useRouter(routes)
-  const navigation = useMemo(() => {
-    return Object.entries(routes)
-      .slice(2) // slice home and notFound
-      .map(([pathname, route]) => (
-        <a
-          key={pathname}
-          {...toPathname(pathname)}
-        >
-          <button key={pathname}>{route.title}</button>
-        </a>
-      ))
-  }, [])
+  const { Page } = useRouter()
 
   return (
     <div>
-      <FlexWrap>{navigation}</FlexWrap>
+      <Navigation />
       <Container>
-        <Route />
+        <Page />
       </Container>
     </div>
   )

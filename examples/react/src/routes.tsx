@@ -1,23 +1,23 @@
-import { BaseRoutes, Route } from './hooks/useRouter'
+import { createRoutes } from './libs/router/create-routes'
 import { UseCookie } from './pages/use-cookie'
 import { UseDidUpdate } from './pages/use-did-update'
 import { UseInterval } from './pages/use-interval'
-import { UseLatest } from './pages/use-latest.js'
+import { UseLatest } from './pages/use-latest'
 import { UseLocalStorage } from './pages/use-local-storage'
 
-export const routes: Record<string, Route> = {
-  [BaseRoutes.NOT_FOUND]: {
+export const routes = createRoutes((baseRoutes) => ({
+  [baseRoutes.NOT_FOUND]: {
     title: 'Page not found',
     component: (toPathname) => {
       return (
         <div>
           <h1>Page not found</h1>
-          <a {...toPathname(BaseRoutes.HOME)}>go to navigation</a>
+          <a {...toPathname(baseRoutes.HOME)}>go to navigation</a>
         </div>
       )
     }
   },
-  [BaseRoutes.HOME]: {
+  [baseRoutes.HOME]: {
     title: 'Home',
     component: <></>
   },
@@ -41,4 +41,4 @@ export const routes: Record<string, Route> = {
     title: 'useLatest',
     component: <UseLatest />
   }
-}
+}))
