@@ -9,8 +9,7 @@
       ...props, // do not forget it
       showLineNumbers: true,
       showRefreshButton: true,
-      showConsole: true,
-      coderHeight: 512
+      showConsole: true
     }"
     :custom-setup="{
       ...props, // do not forget it
