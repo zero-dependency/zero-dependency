@@ -2,6 +2,7 @@
 
 import Theme from 'vitepress/theme'
 import { h } from 'vue'
+import CodeSandbox from './sandbox.vue'
 import './style.css'
 
 export default {
@@ -11,7 +12,8 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
-  enhanceApp({ app, router, siteData }) {
-    // ...
+  enhanceApp(ctx) {
+    Theme.enhanceApp(ctx)
+    ctx.app.component('CodeSandbox', CodeSandbox)
   }
 }

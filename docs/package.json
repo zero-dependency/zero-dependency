@@ -1,0 +1,15 @@
+{
+  "name": "@zero-dependency/docs",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "markdown-it-container": "3.0.0",
+    "vitepress": "1.0.0-beta.1",
+    "vitepress-plugin-sandpack": "0.3.0",
+    "vitepress-plugin-search": "1.0.4-alpha.20"
+  }
+}
