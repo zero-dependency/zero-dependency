@@ -7,7 +7,7 @@ export default defineConfig({
   lang: 'en-US',
   title: 'Zero Dependency',
   description: 'Zero Dependency',
-  cleanUrls: true,
+  // cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
