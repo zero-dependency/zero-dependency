@@ -5,72 +5,44 @@ import styles from './styles.module.css'
 type FeatureItem = {
   title: string
   href: string
-  description: JSX.Element
+  description: string
 }
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'React',
     href: '/api/react',
-    description: (
-      <>
-        React hooks and utils
-      </>
-    )
+    description: 'React hooks and utils'
   },
   {
     title: 'Fetcher',
     href: '/api/fetcher',
-    description: (
-      <>
-        Fetch wrapper
-      </>
-    )
+    description: 'Fetch wrapper'
   },
   {
     title: 'Cookie',
     href: '/api/cookie',
-    description: (
-      <>
-        document.cookie wrapper
-      </>
-    )
+    description: 'document.cookie wrapper'
   },
   {
     title: 'Storage',
     href: '/api/storage',
-    description: (
-      <>
-        Web Storage wrappers
-      </>
-    )
+    description: 'Web Storage wrappers'
   },
   {
     title: 'Emitter',
     href: '/api/emitter',
-    description: (
-      <>
-        Event Emitter
-      </>
-    )
+    description: 'Event Emitter'
   },
   {
     title: 'DOM',
     href: '/api/dom',
-    description: (
-      <>
-        DOM Utilities
-      </>
-    )
+    description: 'DOM Utilities'
   },
   {
     title: 'Utils',
     href: '/api/utils',
-    description: (
-      <>
-        Additional utils
-      </>
-    )
+    description: 'Additional utils'
   }
 ]
 
@@ -97,7 +69,7 @@ function Feature({ title, href, description }: FeatureItem) {
   )
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">

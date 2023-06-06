@@ -7,7 +7,9 @@ interface SelectPackageManagerProps {
   packageName: string
 }
 
-export default function SelectPackageMananger(props: SelectPackageManagerProps) {
+export default function SelectPackageMananger(
+  props: SelectPackageManagerProps
+) {
   const packageManagers = [
     {
       name: 'pnpm',
