@@ -37,7 +37,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'DOM',
     href: '/api/dom',
-    description: 'DOM Utilities'
+    description: 'DOM utils'
   },
   {
     title: 'Utils',
