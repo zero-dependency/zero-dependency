@@ -68,6 +68,8 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'zero-dependency', // Usually your GitHub org/user name.
   projectName: 'zero-dependency', // Usually your repo name.
+  githubHost: 'github.com',
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
