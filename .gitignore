@@ -1,5 +1,8 @@
 **/node_modules
 **/.turbo
+**/cache
 **/dist
+**/.vercel
+**/coverage
 *.log
-coverage
+.DS_Store
