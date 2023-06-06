@@ -56,8 +56,7 @@ const config = {
     ]
   ],
   title: 'Zero Dependency',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
   // Set the production url of your site here
   url: 'https://zero-dependency.vercel.app',
@@ -106,16 +105,14 @@ const config = {
       colorMode: {
         defaultMode: 'dark'
       },
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Zero Dependency',
         logo: {
           alt: 'Zero Dependency logo',
-          src: 'img/logo.svg'
+          src: 'img/logo.png'
         },
         items: [
-          { to: 'api', label: 'API', position: 'left' },
+          { to: '/api', label: 'API', position: 'left' },
           { to: '/docs/packages', label: 'Packages', position: 'left' },
           {
             href: 'https://github.com/zero-dependency',
