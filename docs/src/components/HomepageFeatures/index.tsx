@@ -61,7 +61,7 @@ function Feature({ title, href, description }: FeatureItem) {
             to={href}
             className="button button--secondary button--block button--md"
           >
-            Get Started
+            Overview
           </Link>
         </div>
       </div>
