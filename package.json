@@ -4,16 +4,15 @@
   "version": "0.0.0",
   "workspaces": [
     "packages/*",
-    "examples/*"
+    "examples/*",
+    "docs"
   ],
   "scripts": {
     "dev": "turbo run dev --filter='./packages/*'",
     "build": "turbo run build --filter='./packages/*'",
     "test": "pnpm build && vitest run --coverage",
     "test:watch": "vitest --ui --watch --coverage",
-    "format": "prettier --write --ignore-unknown **",
-    "docs:dev": "turbo run dev --filter='./docs'",
-    "docs:build": "turbo run build --filter='./docs'"
+    "format": "prettier --write --ignore-unknown **"
   },
   "devDependencies": {
     "@crashmax/prettier-config": "3.2.1",
@@ -28,7 +27,6 @@
     "typescript": "5.0.4",
     "vite": "4.2.1",
     "vite-plugin-dts": "2.2.0",
-    "vitest": "0.30.1",
-    "vue": "^3.3.4"
+    "vitest": "0.30.1"
   }
 }

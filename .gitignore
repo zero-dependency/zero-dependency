@@ -2,6 +2,7 @@
 **/.turbo
 **/cache
 **/dist
+**/.vercel
+**/coverage
 *.log
-coverage
-.vercel
+.DS_Store
