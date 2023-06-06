@@ -1,5 +1,11 @@
 # debounce
 
+> Returns a new function that will only be executed after being idle for
+a certain amount of time. Useful for reducing the number of expensive
+function calls.
+
+## Usage
+
 ```ts
 import { el } from '@zero-dependency/dom'
 import { debounce } from '@zero-dependency/utils'
@@ -17,4 +23,13 @@ const button = el(
 )
 
 document.body.appendChild(button)
+```
+
+## Definition
+
+```ts
+function debounce<T extends (...args: any[]) => void>(
+  fn: T,
+  ms: number
+): (...args: Parameters<T>) => void
 ```
