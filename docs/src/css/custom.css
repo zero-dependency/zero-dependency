@@ -28,3 +28,20 @@
   --ifm-color-primary-lightest: #edc293;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* docusaurus-plugin-typedoc-api */
+dd {
+  margin-inline-start: 0px;
+}
+
+hr {
+  background-color: initial;
+}
+
+footer.tsd-footer {
+  display: none;
+}
+
+dl.tsd-comment-tags > dt {
+  display: none;
+}
