@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@crashmax/json-format-highlight": "^1.1.0",
+    "@crashmax/json-format-highlight": "1.1.0",
     "@zero-dependency/react": "workspace:^",
     "@zero-dependency/utils": "workspace:^",
     "react": "18.2.0",

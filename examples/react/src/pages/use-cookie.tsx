@@ -10,11 +10,7 @@ interface CookieData {
 }
 
 export function UseCookie() {
-  const [
-    cookies,
-    setCookie,
-    removeCookie
-  ] = useCookie<CookieData>({
+  const [cookies, { setCookie, removeCookie }] = useCookie<CookieData>({
     encode(value, key) {
       if (key === 'theme') return value
       return JSON.stringify(value)
