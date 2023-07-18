@@ -1,9 +1,11 @@
+import { LoggerProvider } from '@zero-dependency/react'
 import { createRoutes } from './libs/router/create-routes'
-import { UseCookie } from './pages/use-cookie'
+import { UseCookie } from './pages/use-cookie.js'
 import { UseDidUpdate } from './pages/use-did-update'
 import { UseInterval } from './pages/use-interval'
 import { UseLatest } from './pages/use-latest'
 import { UseLocalStorage } from './pages/use-local-storage'
+import { UseLogger } from './pages/use-logger.js'
 
 export const routes = createRoutes((baseRoutes) => ({
   [baseRoutes.NOT_FOUND]: {
@@ -40,5 +42,13 @@ export const routes = createRoutes((baseRoutes) => ({
   '/use-latest': {
     title: 'useLatest',
     component: <UseLatest />
+  },
+  '/use-logger': {
+    title: 'useLogger',
+    component: () => (
+      <LoggerProvider prefix="Logger Prefix">
+        <UseLogger />
+      </LoggerProvider>
+    )
   }
 }))

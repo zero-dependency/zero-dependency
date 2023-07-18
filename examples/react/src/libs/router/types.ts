@@ -1,3 +1,5 @@
+import type { ComponentType } from "react"
+
 export interface Router {
   Page: () => JSX.Element
   createUrl: (path: string) => UrlProps
