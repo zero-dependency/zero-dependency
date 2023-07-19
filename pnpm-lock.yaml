@@ -473,7 +473,7 @@ importers:
         specifier: workspace:1.13.1
         version: link:../cookie
       '@zero-dependency/dom':
-        specifier: workspace:1.8.0
+        specifier: workspace:1.8.1
         version: link:../dom
       '@zero-dependency/emitter':
         specifier: workspace:1.2.2
