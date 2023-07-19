@@ -1,6 +1,6 @@
 {
   "name": "zero-dependency",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Zero Dependency packages",
   "type": "module",
   "types": "./dist/index.d.ts",
@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "@zero-dependency/cookie": "workspace:1.13.1",
-    "@zero-dependency/dom": "workspace:1.8.0",
+    "@zero-dependency/dom": "workspace:1.8.1",
     "@zero-dependency/emitter": "workspace:1.2.2",
     "@zero-dependency/fetcher": "workspace:1.2.2",
     "@zero-dependency/interact": "workspace:0.2.1",

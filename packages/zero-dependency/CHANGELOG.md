@@ -1,5 +1,12 @@
 # zero-dependency
 
+## 0.9.2
+
+### Patch Changes
+
+- Updated dependencies [5de0f74]
+  - @zero-dependency/dom@1.8.1
+
 ## 0.9.1
 
 ### Patch Changes
