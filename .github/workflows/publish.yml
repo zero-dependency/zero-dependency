@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+permissions:
+  id-token: write
+
 jobs:
   cache-and-install:
     runs-on: ubuntu-latest
@@ -47,7 +50,7 @@ jobs:
         run: pnpm build
 
       - name: Publish packages
-        shell: bash
-        run: |
-          echo "//registry.npmjs.org/:_authToken="${{ secrets.NPM_TOKEN }}"" > ~/.npmrc
-          pnpm -r --filter='./packages/*' publish --access public
+        run: pnpm -r --filter='./packages/*' publish --access public
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
