@@ -50,11 +50,7 @@ jobs:
         run: pnpm build
 
       - name: Publish packages
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: 'https://registry.npmjs.org'
-      - run: pnpm -r --filter='./packages/*' publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true
+        shell: bash
+        run: |
+          echo "//registry.npmjs.org/:_authToken="${{ secrets.NPM_TOKEN }}"" > ~/.npmrc
+          pnpm -r --filter='./packages/*' publish --access public --provenance
