@@ -1,5 +1,20 @@
 # zero-dependency
 
+## 0.9.4
+
+### Patch Changes
+
+- 0ef9a43: chore: test npm provenance
+- Updated dependencies [0ef9a43]
+  - @zero-dependency/cookie@1.13.3
+  - @zero-dependency/dom@1.8.3
+  - @zero-dependency/emitter@1.2.4
+  - @zero-dependency/fetcher@1.2.4
+  - @zero-dependency/interact@0.2.3
+  - @zero-dependency/react@0.20.2
+  - @zero-dependency/storage@1.3.3
+  - @zero-dependency/utils@1.7.3
+
 ## 0.9.3
 
 ### Patch Changes
