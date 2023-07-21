@@ -1,5 +1,11 @@
 # @zero-dependency/interact
 
+## 0.2.4
+
+### Patch Changes
+
+- ci: set node 18
+
 ## 0.2.3
 
 ### Patch Changes

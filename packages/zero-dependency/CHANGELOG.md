@@ -1,5 +1,20 @@
 # zero-dependency
 
+## 0.9.5
+
+### Patch Changes
+
+- ci: set node 18
+- Updated dependencies
+  - @zero-dependency/cookie@1.13.4
+  - @zero-dependency/dom@1.8.4
+  - @zero-dependency/emitter@1.2.5
+  - @zero-dependency/fetcher@1.2.5
+  - @zero-dependency/interact@0.2.4
+  - @zero-dependency/react@0.20.3
+  - @zero-dependency/storage@1.3.4
+  - @zero-dependency/utils@1.7.4
+
 ## 0.9.4
 
 ### Patch Changes
