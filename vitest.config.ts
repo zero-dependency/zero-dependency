@@ -5,7 +5,7 @@ export default defineConfig({
     silent: true,
     logHeapUsage: true,
     coverage: {
-      provider: 'c8'
+      provider: 'v8'
     }
   }
 })
