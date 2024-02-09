@@ -124,28 +124,28 @@ importers:
   examples/emitter:
     dependencies:
       '@zero-dependency/emitter':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/emitter
 
   examples/fetcher:
     dependencies:
       '@zero-dependency/dom':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/dom
       '@zero-dependency/fetcher':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/fetcher
 
   examples/interact:
     dependencies:
       '@zero-dependency/dom':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/dom
       '@zero-dependency/interact':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/interact
       '@zero-dependency/storage':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/storage
 
   examples/react:
@@ -179,13 +179,13 @@ importers:
   examples/storage:
     dependencies:
       '@zero-dependency/dom':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/dom
       '@zero-dependency/storage':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/storage
       '@zero-dependency/utils':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/utils
 
   packages/cookie:
