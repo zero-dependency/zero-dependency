@@ -50,6 +50,7 @@ const config: Config = {
         highlightSearchTermsOnTargetPage: true
       }
     ]
+
   ],
   title: 'Zero Dependency',
   favicon: 'img/logo.png',

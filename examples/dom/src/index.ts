@@ -1,35 +1,27 @@
-import { el, observeElement, text, waitElement } from '@zero-dependency/dom'
+import { el, observeElement, waitElement } from '@zero-dependency/dom'
+import { randomToken } from '@zero-dependency/utils'
 
 function createButton() {
-  const card = el('div', { className: 'card' })
-
-  const container = el('div', text('Hello World'), card)
-
   const button = el(
     'button',
     {
       onclick: () => {
-        const value = Math.random().toString(16).slice(2)
-        // card.textContent = value
-        card.classList.add(value)
+        button.textContent = `Click ${randomToken()}`
       }
     },
-    'Click me'
+    'Click'
   )
 
   document.body.append(button)
-
-  setTimeout(() => {
-    const cards = Array.from({ length: 10 }, () => card.cloneNode(true))
-    document.body.append(...cards)
-  }, 1000)
 }
 
-async function bootstrap() {
-  const card = await waitElement('.card')
-  console.log('waitElement:', card)
-  observeElement(card, (mutation) => console.log('observeElement:', mutation))
+async function waitButton() {
+  const button = await waitElement({ selector: 'button' })
+  console.log('waitElement:', button)
+  observeElement(button, (mutation) => {
+    console.log('observeElement:', mutation)
+  })
 }
 
-createButton()
-bootstrap()
+waitButton()
+setTimeout(() => createButton(), 1000)

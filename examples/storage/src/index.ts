@@ -1,4 +1,5 @@
 import { el } from '@zero-dependency/dom'
+
 import { createUser, removeUserById, users, writeUser } from './users.js'
 import type { User } from './users.js'
 
@@ -10,6 +11,7 @@ const thead = el('thead', [
     el('th', 'Name'),
     el('th', 'Age'),
     el('th', 'Action')])
+
 ])
 const tbody = el('tbody')
 

@@ -1,13 +1,13 @@
 import { Cookie } from '@zero-dependency/cookie'
 
-interface User {
+interface UserCookie {
   [username: string]: {
     id: number
     name: string
   }
 }
 
-const cookies = new Cookie<User>({
+const cookies = new Cookie<UserCookie>({
   encode(value) {
     return JSON.stringify(value)
   },
@@ -20,5 +20,14 @@ const cookies = new Cookie<User>({
   }
 })
 
-cookies.set('le_xot', { id: 1, name: 'Lesha' }, { expires: 7 })
-console.log(cookies.get('le_xot'))
+// set
+cookies.set('john', { id: 1, name: 'John Doe' })
+
+// get
+const john = cookies.get('john')
+if (john) {
+  console.log(john.id, john.name)
+}
+
+// remove
+cookies.remove('john')

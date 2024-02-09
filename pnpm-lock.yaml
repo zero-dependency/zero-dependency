@@ -109,14 +109,17 @@ importers:
   examples/cookie:
     dependencies:
       '@zero-dependency/cookie':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/cookie
 
   examples/dom:
     dependencies:
       '@zero-dependency/dom':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/dom
+      '@zero-dependency/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
 
   examples/emitter:
     dependencies:

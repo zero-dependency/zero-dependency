@@ -2,9 +2,15 @@ import { el } from '@zero-dependency/dom'
 import { Interact } from '@zero-dependency/interact'
 import { LocalStorage } from '@zero-dependency/storage'
 
-const modalHeader = el('div', {
-  className: 'modal-header'
-})
+import './style.css'
+
+const modalHeader = el(
+  'div',
+  {
+    className: 'modal-header'
+  },
+  'Pinch to move'
+)
 
 const modalContainer = el('div', {
   className: 'modal-container'

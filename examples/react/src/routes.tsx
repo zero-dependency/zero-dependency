@@ -1,4 +1,5 @@
 import { LoggerProvider } from '@zero-dependency/react'
+
 import { createRoutes } from './libs/router/create-routes'
 import { UseCookie } from './pages/use-cookie.js'
 import { UseDidUpdate } from './pages/use-did-update'

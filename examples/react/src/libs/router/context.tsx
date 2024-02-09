@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+
 import { BaseRoutes } from './base-routes'
 import { createUrlWithOrigin } from './helpers'
 import { RouterProvider } from './hook'
