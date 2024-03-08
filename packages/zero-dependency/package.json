@@ -1,6 +1,6 @@
 {
   "name": "zero-dependency",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "description": "Zero Dependency packages",
   "type": "module",
   "types": "./dist/index.d.ts",
@@ -68,7 +68,7 @@
     "@zero-dependency/emitter": "workspace:1.2.5",
     "@zero-dependency/fetcher": "workspace:1.2.5",
     "@zero-dependency/interact": "workspace:0.2.4",
-    "@zero-dependency/react": "workspace:0.20.4",
+    "@zero-dependency/react": "workspace:0.21.0",
     "@zero-dependency/storage": "workspace:1.3.4",
     "@zero-dependency/utils": "workspace:1.7.5"
   }

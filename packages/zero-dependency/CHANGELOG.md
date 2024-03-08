@@ -1,5 +1,12 @@
 # zero-dependency
 
+## 0.9.7
+
+### Patch Changes
+
+- Updated dependencies
+  - @zero-dependency/react@0.21.0
+
 ## 0.9.6
 
 ### Patch Changes
