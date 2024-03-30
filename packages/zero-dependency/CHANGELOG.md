@@ -1,5 +1,14 @@
 # zero-dependency
 
+## 0.9.9
+
+### Patch Changes
+
+- Updated dependencies
+  - @zero-dependency/utils@1.7.7
+  - @zero-dependency/cookie@1.13.7
+  - @zero-dependency/react@0.21.2
+
 ## 0.9.8
 
 ### Patch Changes
