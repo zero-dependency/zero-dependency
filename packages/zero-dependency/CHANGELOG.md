@@ -1,5 +1,12 @@
 # zero-dependency
 
+## 0.9.10
+
+### Patch Changes
+
+- Updated dependencies
+  - @zero-dependency/utils@1.7.8
+
 ## 0.9.9
 
 ### Patch Changes
