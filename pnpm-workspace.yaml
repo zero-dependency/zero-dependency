@@ -1,4 +1,9 @@
 packages:
-  - 'packages/*'
-  - 'examples/*'
-  - 'docs'
+  - packages/*
+  - examples/*
+  - docs
+
+onlyBuiltDependencies:
+  - core-js
+  - core-js-pure
+  - esbuild

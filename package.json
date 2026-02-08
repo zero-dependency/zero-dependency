@@ -2,35 +2,32 @@
   "name": "@zero-dependency/monorepo",
   "private": true,
   "version": "0.0.0",
-  "workspaces": [
-    "packages/*",
-    "examples/*",
-    "docs"
-  ],
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22.22.0"
+  },
   "scripts": {
     "dev": "turbo run dev --filter=./packages/*",
+    "dev:docs": "turbo run dev --filter=./docs",
     "build": "turbo run build --filter=./packages/*",
+    "build:docs": "turbo run build --filter=./docs",
+    "type-check": "turbo run type-check",
     "test": "pnpm build && vitest run --coverage",
     "test:watch": "vitest --ui --watch --coverage",
     "format": "prettier --write --ignore-unknown **",
-    "docs:dev": "turbo run dev --filter=./docs",
-    "docs:build": "turbo run build --filter=./docs",
     "changeset": "changeset"
   },
   "devDependencies": {
-    "@changesets/cli": "2.27.1",
-    "@crashmax/prettier-config": "5.0.1",
-    "@crashmax/tsconfig": "2.1.0",
-    "@types/node": "20.11.10",
-    "@vitest/coverage-v8": "1.2.2",
-    "@vitest/ui": "1.2.2",
-    "jsdom": "24.0.0",
-    "react": "18.2.0",
-    "tsx": "4.7.0",
-    "turbo": "1.11.3",
-    "typescript": "5.3.3",
-    "vite": "5.0.12",
-    "vite-plugin-dts": "3.7.2",
-    "vitest": "1.2.2"
+    "@changesets/cli": "2.29.8",
+    "@crashmax/prettier-config": "5.0.2",
+    "@crashmax/tsconfig": "2.2.0",
+    "@vitest/coverage-v8": "4.0.18",
+    "@vitest/ui": "4.0.18",
+    "tsx": "4.21.0",
+    "turbo": "2.8.3",
+    "typescript": "5.9.3",
+    "vite": "7.3.1",
+    "vite-plugin-dts": "4.5.4",
+    "vitest": "4.0.18"
   }
 }

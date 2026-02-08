@@ -1,13 +1,14 @@
 {
   "extends": "@crashmax/tsconfig",
   "compilerOptions": {
+    "resolveJsonModule": true,
     "outDir": "dist",
-    "strictNullChecks": false,
     "types": [
       "vite/client"
     ]
   },
   "include": [
-    "src/**/*"
+    "src",
+    "vite.config.ts"
   ]
 }

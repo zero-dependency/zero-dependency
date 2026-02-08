@@ -1,0 +1,50 @@
+name: Publish and Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  id-token: write
+  contents: write
+
+env:
+  TURBO_TELEMETRY_DISABLED: 1
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Caching for Turborepo
+        uses: rharkor/caching-for-turbo@v2.3.11
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build apps and packages
+        run: pnpm build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: docs/build
+
+      - name: Publish packages
+        shell: bash
+        run: |
+          echo "//registry.npmjs.org/:_authToken="${{ secrets.NPM_TOKEN }}"" > ~/.npmrc
+          pnpm -r --filter='./packages/*' publish --access public --provenance

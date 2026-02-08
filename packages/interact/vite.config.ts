@@ -11,10 +11,10 @@ export default defineConfig({
   plugins: [dts({ include: entry })],
   build: {
     sourcemap: true,
-    minify: true,
+    minify: false,
     target: 'esnext',
     lib: {
-      formats: ['es', 'cjs'],
+      formats: ['es'],
       entry: resolve(entry, 'index.ts'),
       fileName: 'index',
       name

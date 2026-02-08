@@ -4,12 +4,10 @@
   "description": "Zero Dependency library for creating interactive elements",
   "type": "module",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "sideEffects": false,
@@ -26,7 +24,7 @@
   "homepage": "https://github.com/zero-dependency",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zero-dependency/zero-dependency.git",
+    "url": "git+https://github.com/zero-dependency/zero-dependency.git",
     "directory": "packages/interact"
   },
   "bugs": {
@@ -40,6 +38,7 @@
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",
+    "type-check": "tsc --noEmit",
     "format": "prettier --write --ignore-unknown **"
   },
   "dependencies": {

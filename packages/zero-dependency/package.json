@@ -4,12 +4,10 @@
   "description": "Zero Dependency packages",
   "type": "module",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "sideEffects": false,
@@ -37,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zero-dependency/zero-dependency.git",
+    "url": "git+https://github.com/zero-dependency/zero-dependency.git",
     "directory": "packages/zero-dependency"
   },
   "author": {
@@ -48,19 +46,20 @@
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",
+    "type-check": "tsc --noEmit",
     "test": "vitest run --coverage",
     "test:watch": "vitest --ui --watch --coverage"
   },
   "devDependencies": {
-    "@crashmax/tsconfig": "2.1.0",
-    "@types/node": "20.11.10",
-    "@vitest/coverage-v8": "1.2.2",
-    "@vitest/ui": "1.2.2",
-    "jsdom": "24.0.0",
-    "typescript": "5.3.3",
-    "vite": "5.0.12",
-    "vite-plugin-dts": "3.7.2",
-    "vitest": "1.2.2"
+    "@crashmax/tsconfig": "2.2.0",
+    "@types/node": "^22.19.10",
+    "@vitest/coverage-v8": "4.0.18",
+    "@vitest/ui": "4.0.18",
+    "happy-dom": "20.5.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.1",
+    "vite-plugin-dts": "4.5.4",
+    "vitest": "4.0.18"
   },
   "dependencies": {
     "@zero-dependency/cookie": "workspace:1.13.8",
