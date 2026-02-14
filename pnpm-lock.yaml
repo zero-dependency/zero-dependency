@@ -476,7 +476,7 @@ importers:
         specifier: workspace:1.13.8
         version: link:../cookie
       '@zero-dependency/dom':
-        specifier: workspace:1.8.4
+        specifier: workspace:1.8.5
         version: link:../dom
       '@zero-dependency/emitter':
         specifier: workspace:1.2.5
